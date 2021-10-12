@@ -1,0 +1,269 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+</head>
+<body topmargin="0" leftmargin="0">
+
+
+<!--    <h4 class="t-header">Call Work</h4>-->
+
+<div class="alert alert-warning alert-dismissible fade show" id="serverResponse" style="display: none" align="center"
+     role="alert"><span
+        class="image model_alert_ico"><i class="icon-alert-triangle"></i></span>
+</div>
+<form name="frm" th:action="@{/bill/saveBillUpdate}" method="Post" id="authForm">
+
+    <div class="row">
+        <div hidden class="col-md-6">
+            <div class="form-group">
+                <label class="col-form-label">Relation ID</label>
+                <input readonly class="form-control readonly_input" th:value="${employeeBillsClaim.getId()}">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="col-form-label">Employee Name </label>
+                <input readonly hidden class="form-control readonly_input" name="employeeID"
+                       th:value="${employeeBillsClaim.getEmployee().getId()}">
+                <input readonly class="form-control readonly_input"
+                       th:value="${employeeBillsClaim.employee.firstName + ' ' + employeeBillsClaim.employee.lastName}">
+
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="col-form-label">Bill Type</label>
+                <!--        <input readonly hidden name="leavesCategories" class="form-control readonly_input"  th:value="${employeeBillsClaim.getBillType()}">-->
+                <input readonly name="billType" class="form-control readonly_input"
+                      id="billType" th:value="${employeeBillsClaim.billType}">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="col-form-label">Bill Frequency</label>
+                <input readonly name="billFrequency" class="form-control readonly_input"
+                       th:value="${employeeBillsClaim.billFrequency}">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="col-form-label">Bill Amount</label>
+                <input readonly name="amount" class="form-control readonly_input"
+                      th:value="${'Rs. ' + #numbers.arrayFormatInteger(employeeBillsClaim.amount,3,'COMMA')}">
+                <input  id="billAmount" th:value="${employeeBillsClaim.amount}" hidden>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="col-form-label">Approved Amount</label>
+                <!--        <input readonly hidden name="leavesCategories" class="form-control readonly_input"  th:value="${employeeBillsClaim.getBillType()}">-->
+                <input id="approvedAmount"  title="Enter only numbers!!!" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                        class="form-control amb readonly_input" name="approvedAmount" placeholder="Enter Amount" required>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="col-form-label">Date Created</label>
+                <input readonly class="form-control readonly_input" name="dateCreated"
+                       th:value="${employeeBillsClaim.dateCreated}">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="col-form-label">Bill Title</label>
+                <input readonly name="title" class="form-control readonly_input" th:value="${employeeBillsClaim.title}">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="col-form-label">Status</label>
+                <input readonly class="form-control readonly_input" th:value="${employeeBillsClaim.status}">
+            </div>
+        </div>
+        <div class="col-md-6">
+
+            <div class="form-group">
+                <label class="control-label">Your Response</label>
+                <select id="response" class="form-control" name="status" required>
+                    <option value="">Select Response</option>
+                    <option
+                            th:each="type :${T(com.econception.employemanagement.enumeration.ApprovedStatus).values()}"
+                            th:value="${type}"
+                            th:text="${type}">
+                    </option>
+                </select>
+
+            </div>
+        </div>
+    </div>
+
+    <!--        Comment Box start here-->
+    <label class="col-form-label">Comment</label>
+    <div id="comtBox" class="overflow-auto">
+
+        <div class="comments_sets">
+
+            <ul class="user-messages">
+                <li class="clearfix" th:each="pen: ${comtList}">
+                    <div class="comments_sets_col">
+                        <div class="customer"
+                             th:text="${#strings.substring(pen.employee.firstName, 0, 1) + #strings.substring(pen.employee.lastName,0,1)}">
+                            AM
+                        </div>
+                        <div class="delivery-details">
+                            <span class="badge badge-primary" th:text="${pen.dateCreated}">Ordered</span>
+                            <h5 th:text="${pen.employee.firstName + ' ' + pen.employee.lastName }"></h5>
+                            <p th:text="${pen.text}"></p>
+                            <input type="hidden" name="moduleId" th:value="${pen.module.id}">
+                            <input type="hidden" name="parentID" th:value="${pen.parent}">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <input class="form-control readonly_input" name="billDetail" placeholder="Reply">
+    <!--        Comment Box ends here-->
+    <br/>
+
+
+    <div hidden class="form-group">
+        <label class="col-form-label">Authorization</label>
+
+        <select class="form-control" name="authorize">
+            <option value='1'>Authorized</option>
+            <!--<option value="2">Not Authorized</option>-->
+        </select>
+    </div>
+
+    <div class=" gallery">
+        <div class="row gutters">
+            <div class="col-md-4" th:each="pen: ${files}">
+                <a target="_blank" th:href="@{${pen.getPhotosImagePath()}}" class="effects">
+
+                    <img th:src="@{${pen.getPhotosImagePath()}}" class="img-fluid"/>
+                    <div class="overlay">
+                        <span class="expand">+</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <button hidden id="autoC1" class="btn btn-outline-primary"
+            th:data-id="${employeeBillId}"
+            onclick=" hideModal()"
+            type="button">
+        Edit Profile</span>
+    </button>
+
+    <!--        <div class="form-group">-->
+    <!--            <label class="col-form-label">Password</label>-->
+    <!--            <input class="form-control" type="password" name="password" placeholder="Enter password" required>-->
+    <!--        </div>-->
+
+    <div class="buttons_margin">
+        <button type="submit" id="submit" class="btn btn-outline-success btn-rounded float-right btn_set_ico"
+                name="Save">Save <span class="icon-save2"></span></button>
+        <button type="button" class="btn btn-outline-danger btn-rounded float-right btn_set_ico"
+                data-dismiss="modal"
+                name="Cancel">Cancel <span class="icon-circle-with-cross"></span></button>
+    </div>
+    <input type="hidden" name="id" th:value="${employeeBillId}">
+</form>
+
+<script>
+    $('document').ready(function () {
+        let serverResponse = $('#serverResponse');
+        $("#authForm").submit(function (event) {
+
+            event.preventDefault();
+            let post_url = $(this).attr("action");
+            let form_data = $(this).serialize();
+            console.log(form_data);
+
+            $.post(post_url, form_data, function (data) {
+                console.log(data);
+
+                if (data === "Success") {
+                    serverResponse.html("Record Updated Successfully");
+                    serverResponse.show();
+                    setTimeout(function (){$('#autoC1').trigger('click');}, 300);
+                    setTimeout(function (){loadContent("/welcome")}, 400);
+                    $("#authForm").trigger("reset");
+
+                } else {
+                    serverResponse.html("Unable to update.");
+                    serverResponse.show();
+                }
+            })
+        })
+    })
+    let billType = document.getElementById("billType").value;
+    let billAmount = document.getElementById("billAmount").value;
+        $('#response').change(function (){
+            let approvedAmount = document.getElementById("approvedAmount").value;
+            billAmount = parseInt(billAmount);
+            approvedAmount = parseInt(approvedAmount);
+
+            let response = $('#response option:selected').val();
+            let serverResponse = $('#serverResponse');
+            if( response === "APPROVED"){
+                if(billType === "TRAVEL" || billType === "travel"){
+                    if(approvedAmount !== billAmount){
+                        serverResponse.html("Approved amount must be equal to bill amount!!");
+                        serverResponse.show();
+                        document.getElementById("submit").style.display = "none";
+                    }
+                    else {
+                        serverResponse.hide();
+                        document.getElementById("submit").style.display = "block";
+                    }
+
+                }
+
+            }
+            else {
+                serverResponse.hide();
+                document.getElementById("submit").style.display = "block";
+
+            }
+
+        });
+    $('input.amb').on('input',function(e){
+        let approvedAmount = document.getElementById("approvedAmount").value;
+        billAmount = parseInt(billAmount);
+        approvedAmount = parseInt(approvedAmount);
+        let response = $('#response option:selected').val();
+        let serverResponse = $('#serverResponse');
+        console.log(approvedAmount + " " + billAmount)
+        if(approvedAmount !== billAmount ){
+            if(billType === "TRAVEL" || billType === "travel"){
+                if(response === "APPROVED") {
+                    serverResponse.html("Approved amount must be equal to bill amount!!");
+                    document.getElementById("submit").style.display = "none";
+                    serverResponse.show();
+
+                }
+                else {
+                    serverResponse.hide();
+                    document.getElementById("submit").style.display = "block";
+                }
+
+
+            }
+
+        }
+        else {
+            serverResponse.hide();
+            document.getElementById("submit").style.display = "block";
+
+        }
+
+    });
+</script>
+</div>
+</body>
+
+</html>

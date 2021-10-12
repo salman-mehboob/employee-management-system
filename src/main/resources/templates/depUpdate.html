@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head></head>
+<body topmargin="0" leftmargin="0">
+
+
+<!--    <h4 class="t-header">Call Work</h4>-->
+
+<div class="alert alert-warning alert-dismissible fade show" id="serverResponse" style="display: none" align="center"
+     role="alert"><span
+        class="image model_alert_ico"><i class="icon-alert-triangle"></i></span>
+</div>
+<form name="frm" th:action="@{/dependants/saveDepUpdate}" method="Post" id="authForm">
+
+
+    <div hidden class="form-group">
+        <label class="col-form-label">Relation ID</label>
+        <input readonly class="form-control readonly_input" th:value="${Dep.id}">
+    </div>
+
+    <div class="form-group">
+        <label class="col-form-label">Employee Name </label>
+        <input readonly hidden class="form-control readonly_input" name="employee" th:value="${Dep.employee.getId()}">
+        <input readonly class="form-control readonly_input"
+               th:value="${Dep.employee.firstName + ' ' + Dep.employee.lastName}">
+
+    </div>
+
+    <div class="form-group">
+        <label class="col-form-label">Dependant First Name</label>
+        <input class="form-control readonly_input" name="firstName" th:value="${Dep.firstName}"
+               title="Enter only alphabets!!!"  onkeypress="return /[a-z]/i.test(event.key)">
+    </div>
+    <div class="form-group">
+        <label class="col-form-label">Dependant Last Name</label>
+        <input class="form-control readonly_input" name="lastName" th:value="${Dep.lastName}"
+               title="Enter only alphabets!!!"  onkeypress="return /[a-z]/i.test(event.key)">
+    </div>
+    <div class="form-group">
+        <label class="col-form-label">Dependant Date of birth</label>
+        <input class="form-control readonly_input" name="DOB" th:value="${Dep.DOB}">
+    </div>
+    <div class="col-md-4">
+        <div class="form-group">
+            <label class="control-label">Dependant Relation</label>
+            <select class="form-control" name="dependantsRelation">
+                <option th:text="${Dep.dependantsRelation}" th:selected th:value="${Dep.dependantsRelation}"></option>
+                <option
+                        th:each="type :${T(com.econception.employemanagement.enumeration.DependantsRelation).values()}"
+                        th:value="${type}"
+                        th:text="${type}"
+                >
+                </option>
+            </select>
+
+        </div>
+    </div>
+
+
+    <div hidden class="form-group">
+        <label class="col-form-label">Authorization</label>
+
+        <select class="form-control" name="authorize">
+            <option value='1'>Authorized</option>
+            <!--<option value="2">Not Authorized</option>-->
+        </select>
+    </div>
+
+    <!--        <div class="form-group">-->
+    <!--            <label class="col-form-label">Password</label>-->
+    <!--            <input class="form-control" type="password" name="password" placeholder="Enter password" required>-->
+    <!--        </div>-->
+
+    <div class="buttons_margin">
+        <button type="submit" id="submit" class="btn btn-outline-success btn-rounded float-right btn_set_ico"
+                name="Save">Save <span class="icon-save2"></span></button>
+        <button type="button" class="btn btn-outline-danger btn-rounded float-right btn_set_ico"
+                data-dismiss="modal"
+                name="Cancel">Cancel <span class="icon-circle-with-cross"></span></button>
+    </div>
+    <input type="hidden" name="id" th:value="${userId}">
+</form>
+
+<script>
+    $('document').ready(function () {
+        let serverResponse = $('#serverResponse');
+        $("#authForm").submit(function (event) {
+
+            event.preventDefault();
+            let post_url = $(this).attr("action");
+            let form_data = $(this).serialize();
+            console.log(form_data);
+
+            $.post(post_url, form_data, function (data) {
+                console.log(data);
+
+                if (data === "Success") {
+                    serverResponse.html("Record Updated Successfully");
+                    serverResponse.show();
+                    $("#employeeForm").trigger("reset");
+
+                } else {
+                    serverResponse.html("Unable to update.");
+                    serverResponse.show();
+                }
+            })
+        })
+    })
+</script>
+</div>
+</body>
+
+</html>

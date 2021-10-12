@@ -1,0 +1,232 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head></head>
+<body topmargin="0" leftmargin="0">
+
+<!--    <h4 class="t-header">Call Work</h4>-->
+
+<div class="alert alert-warning alert-dismissible fade show" id="serverResponse" style="display: none" align="center"
+     role="alert"><span
+        class="image model_alert_ico"><i class="icon-alert-triangle"></i></span>
+</div>
+<form id="employeeForm" autocomplete="on" action="#" th:action="@{/saveRegRequestUpdate}"
+      th:object="${user}" method="post" class="form-horizontal"
+      role="form">
+
+    <div class="row">
+        <div hidden class="col-md-6">
+            <div class="form-group">
+                <label class="col-form-label">Employee ID</label>
+                <input readonly hidden class="form-control readonly_input" name="EmpID" th:value="${user.employee.id}">
+                <input readonly class="form-control readonly_input" th:value="${user.id}">
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label">First Name</label>
+                <input readonly class="form-control" type="text" th:value="${user.employee.firstName}"
+                       placeholder="First Name" name="firstName" size="30" maxlength="30">
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label">Middle Name</label>
+                <input readonly class="form-control" type="text" th:value="${user.employee.middleName}"
+                       placeholder="Middle Name" name="middleName" size="30" maxlength="30">
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label">Last Name</label>
+                <input readonly class="form-control" type="text" placeholder="Last Name"
+                       th:value="${user.employee.lastName}" name="lastName" size="30" maxlength="30">
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label">Gender</label>
+                <input readonly class="form-control" type="text" placeholder="Last Name"
+                       th:value="${user.employee.gender}" name="gender" size="30" maxlength="30">
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label">Date of Birth</label>
+                <input readonly th:value="${user.employee.DOB}" type="date" id="DOB"
+                       min="1985-01-01" max="2000-01-01" class="form-control" placeholder="Last Name" name="DOB"
+                       size="30" maxlength="30">
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label">Primary Contact Number</label>
+                <input readonly th:value="${user.employee.primaryContactNumber}" class="form-control" type="tel"
+                       placeholder="03xx-xxxxxxx" required name="primaryContactNumber" size="12" maxlength="12">
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label">Secondary Contact Number</label>
+                <input readonly th:value="${user.employee.secondryContactNumber}" class="form-control" type="tel"
+                       placeholder="03xx-xxxxxxx" required name="secondryContactNumber" size="12" maxlength="12">
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label">CNIC</label>
+                <input readonly class="form-control" th:value="${user.employee.cnic}" type="tel"
+                       placeholder="37xxx-xxxxxxx-x" name="cnic" size="15" maxlength="15">
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label">Address</label>
+                <input readonly class="form-control" type="text" th:value="${user.employee.address}"
+                       placeholder="Address" name="address" size="60" maxlength="100">
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label">Line 2</label>
+                <input readonly class="form-control" type="text" placeholder="Address" th:value="${user.employee.line2}"
+                       name="line2" size="60" maxlength="100">
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label">City</label>
+                <input readonly class="form-control" type="text" placeholder="City" th:value="${user.employee.city}"
+                       name="city" size="60" maxlength="100">
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label">Skype</label>
+                <input readonly class="form-control" type="text" placeholder="skype" th:value="${user.employee.skype}"
+                       name="skype" size="60" maxlength="100">
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label">Linkedin</label>
+                <input readonly class="form-control" type="text" placeholder="linkedin"
+                       th:value="${user.employee.linkedin}" name="linkedin" size="60" maxlength="100">
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label">Personal Email</label>
+                <input readonly class="form-control" type="email" placeholder="abc@xyz.com"
+                       th:value="${user.employee.personalEmail}" name="personalEmail" size="60" maxlength="100">
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label">Work Email</label>
+                <input readonly class="form-control" type="email" placeholder="abc@xyz.com"
+                       th:value="${user.employee.workEmail}" name="workEmail" size="60" maxlength="100">
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label">Departmant</label>
+                <input readonly class="form-control" type="email" placeholder="abc@xyz.com"
+                       th:value="${user.employee.department.name}" name="workEmail" size="60" maxlength="100">
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label">Designation</label>
+                <input readonly class="form-control" type="email" placeholder="abc@xyz.com"
+                       th:value="${user.employee.designation}" name="workEmail" size="60" maxlength="100">
+            </div>
+        </div>
+        <div hidden class="col-md-6">
+            <div class="form-group">
+                <label class="control-label">User Name</label>
+                <input readonly class="form-control" type="text" th:value="${user.username}" name="username" size="60"
+                       maxlength="100">
+                <input readonly class="form-control" type="text" th:value="${user.password}" name="password" size="60"
+                       maxlength="100">
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="form-group">
+            <label class="control-label">Assign Role</label>
+            <select class="form-control" name="role" required>
+                <option value="">Select Role</option>
+                <option th:each="role : ${role}" th:value="${role.role}" th:text="${role.role}"
+                > role
+                </option>
+            </select>
+        </div>
+    </div>
+    <button hidden id="autoC1" class="btn btn-outline-primary"
+            th:data-id="${userId}"
+            onclick=" hideModal()"
+            type="button">
+        Edit Profile</span>
+    </button>
+
+
+    <div class="col-md-12">
+        <button type="submit" id="submit" name="submit"
+                class="btn btn-outline-primary btn-rounded float-right btn_set_ico">Save <span
+                class="icon-lock_outline"></span></button>
+    </div>
+    <input type="hidden" name="id" th:value="${userId}">
+    <input type="hidden" name="userWorkEmail" th:value="${userList.employee.workEmail}">
+</form>
+
+<script>
+    $('document').ready(function () {
+        let serverResponse = $('#serverResponse');
+        $("#employeeForm").submit(function (event) {
+
+            event.preventDefault();
+            let post_url = $(this).attr("action");
+            let form_data = $(this).serialize();
+            console.log(form_data);
+
+            $.post(post_url, form_data, function (data) {
+                console.log(data);
+
+                if (data === "Success") {
+                    serverResponse.html("Register Successfully");
+                    serverResponse.show();
+                    setTimeout(function (){$('#autoC1').trigger('click');}, 300);
+                    setTimeout(function (){loadContent("/welcome")}, 400);
+
+                } else {
+                    serverResponse.html("This Username is taken. Please try another.");
+                    serverResponse.show();
+                }
+            })
+        })
+    })
+</script>
+</div>
+</body>
+</html>
+
+
+

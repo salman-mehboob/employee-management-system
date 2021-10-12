@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <title>Home</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+
+<body>
+
+<div class="wrapper d-flex align-items-stretch">
+    <nav id="sidebar">
+        <div class="p-4 pt-5">
+            <!--		  		<a class="img logo rounded-circle mb-5" href="#" th:style="'background: url(' + @̣{/css/images/logo.png} + ') repeat-y right; width: 6px;'"> </a>-->
+            <a href="#" th:align="center"><span>Profile</span></a>
+            <ul class="list-unstyled components mb-5">
+                <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Employee
+                        Management</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="/showEmployee">Employees</a>
+                        </li>
+                        <li>
+                            <a href="/registration">Register Employee</a>
+                        </li>
+                        <li>
+                            <a href="#">Home 3</a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li class="active">
+                    <a href="#homeSubmenu1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Bills
+                        Claim Management</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu1">
+                        <li>
+                            <a href="#">Claim</a>
+                        </li>
+                        <li>
+                            <a href="#">Claim</a>
+                        </li>
+                        <li>
+                            <a href="#">Claim</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="active">
+                    <a href="#homeSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Leaves
+                        Management</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu2">
+                        <li>
+                            <a href="#">Leaves</a>
+                        </li>
+                        <li>
+                            <a href="#">Leaves</a>
+                        </li>
+                        <li>
+                            <a href="#">Leaves</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+
+                <li>
+
+            </ul>
+
+        </div>
+    </nav>
+
+    <!-- Page Content  -->
+    <div id="content" class="p-4 p-md-5">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+
+                <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                    <i class="fa fa-bars"></i>
+                    <span class="sr-only">Toggle Menu</span>
+                </button>
+                <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+
+                <div th:align="right" class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <form th:align="right" th:action="@{/logout}" method="post">
+                        <button th:align="right" type="submit" class="btn ">Logout</button>
+                    </form>
+
+                </div>
+            </div>
+        </nav>
+
+        <h2 class="mb-4">HOME</h2>
+        <div sec:authorize="isAuthenticated()">
+            Welcome <b><span sec:authentication="name">username</span></b>
+            &nbsp;&nbsp;
+            <b><span sec:authentication="principal.authorities">role</span></b>
+
+        </div>
+    </div>
+</div>
+<script type="text/javascript" th:src="@{/css/js/jquery.min.js}"></script>
+<script type="text/javascript" th:src="@{/css/js/bootstrap.min.js}"></script>
+<script type="text/javascript" th:src="@{/css/js/popper.js}"></script>
+<script type="text/javascript" th:src="@{/css/js/main.js}"></script>
+</body>
+</html>

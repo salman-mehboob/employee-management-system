@@ -1,0 +1,453 @@
+/* CSS for login Page */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body {
+    background: url(../images/login_bg.png) 0px 0px no-repeat;
+    background-size: 100%;
+    height: 100%;
+}
+
+@media only screen and (min-width:320px) and (max-width:767px) {
+    body{
+        background-size:100% cover !important;
+    }
+    .container_center{
+        width: 90% !important;
+    }
+}
+
+
+h1 {
+    font-size: 28px;
+}
+
+h2 {
+    font-size: 26px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+h4 {
+    font-size: 16px;
+}
+
+h5 {
+    font-size: 14px;
+}
+
+h6 {
+    font-size: 12px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #563D64;
+}
+
+small {
+    font-size: 10px;
+}
+
+b,
+strong {
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.alignleft {
+    float: left;
+    margin-right: 15px;
+}
+
+.alignright {
+    float: right;
+    margin-left: 15px;
+}
+
+.clearfix:after,
+form:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.container {
+    margin: 25px auto;
+    position: relative;
+    width: 100%;
+}
+
+#content {
+    padding: 15px 0 0;
+    position: relative;
+    text-align: center;
+    text-shadow: 0 1px 0 #fff;
+    width: 100%;
+}
+
+.logo_center {
+    margin: 0 auto;
+    width: 280px;
+    text-align: center;
+}
+
+.logo_center img {
+    max-width: 85%;
+    margin: 0px 0 30px 0px;
+}
+
+.container_center {
+    margin: 0 auto;
+    width: 450px;
+    margin-top: 110px;
+}
+
+.container_bg_transparent {
+    background-color: rgba(255, 255, 255, 0.82);
+    box-shadow: -1px 7px 20px #a59890;
+    text-align: center;
+    padding: 50px 34px;
+    border-bottom: solid 5px #1b8e5f;
+    border-radius: 4px;
+}
+
+.container_bg_transparent h5 {
+    font-size: 22px;
+    color: #747474;
+    text-align: center;
+    margin: 0 0 5px 0;
+    width: 100%;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 700;
+}
+
+.container_bg_transparent p {
+    font-size: 19px;
+    color: #858585;
+    text-align: center;
+    margin: 0 0 30px 0;
+    width: 100%;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 400;
+}
+
+
+#content h1 {
+    color: #7E7E7E;
+    font: bold 25px Helvetica, Arial, sans-serif;
+    letter-spacing: -0.05em;
+    line-height: 20px;
+    margin: 10px 0 30px;
+}
+
+#content h1:before,
+#content h1:after {
+    content: "";
+    height: 1px;
+    position: absolute;
+    top: 10px;
+    width: 27%;
+}
+
+#content h1:after {
+    background: rgb(126, 126, 126);
+    background: -moz-linear-gradient(left, rgba(126, 126, 126, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    background: -webkit-linear-gradient(left, rgba(126, 126, 126, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    background: -o-linear-gradient(left, rgba(126, 126, 126, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    background: -ms-linear-gradient(left, rgba(126, 126, 126, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    background: linear-gradient(left, rgba(126, 126, 126, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    right: 0;
+}
+
+#content h1:before {
+    background: rgb(126, 126, 126);
+    background: -moz-linear-gradient(right, rgba(126, 126, 126, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    background: -webkit-linear-gradient(right, rgba(126, 126, 126, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    background: -o-linear-gradient(right, rgba(126, 126, 126, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    background: -ms-linear-gradient(right, rgba(126, 126, 126, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    background: linear-gradient(right, rgba(126, 126, 126, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    left: 0;
+}
+
+#content:after,
+#content:before {
+    background: #f9f9f9;
+}
+
+#content form {
+    margin: 0px;
+    position: relative
+}
+
+.error{
+    font-weight: bold;
+    color: #F00;
+}
+
+#content form input[type="text"],
+#content form input[type="password"] {
+    /*background: #fff url(http://cssdeck.com/uploads/media/items/8/8bcLQqF.png) no-repeat;*/
+    border: 1px solid #bfc4d5;
+    color: #777;
+    font: 13px Helvetica, Arial, sans-serif;
+    margin: 0 0 15px;
+    padding: 13px 10px 13px 40px;
+    width: 88%;
+}
+
+#content form input[type="text"]:focus,
+#content form input[type="password"]:focus {
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid #7E7E7E;
+    outline: none;
+}
+
+#username {
+    background-position: 10px 10px !important
+}
+
+#password {
+    background-position: 10px -53px !important
+}
+
+
+#content form div a {
+    color: #004a80;
+    float: right;
+    font-size: 12px;
+    margin: 30px 15px 0 0;
+    text-decoration: underline;
+}
+
+.button {
+    background: rgb(247, 249, 250);
+    border-radius: 0 0 5px 5px;
+    border-top: 1px solid #CFD5D9;
+    padding: 15px 0;
+}
+
+.button a {
+    background: url(http://cssdeck.com/uploads/media/items/8/8bcLQqF.png) 0 -112px no-repeat;
+    color: #7E7E7E;
+    font-size: 17px;
+    padding: 2px 0 2px 40px;
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.button a:hover {
+    background-position: 0 -135px;
+    color: #00aeef;
+}
+
+.user_bg#username {
+    background: url(../images/user.png) 0px 0px no-repeat #fff;
+    background-position: 8px 11px !important;
+    background-size: 18px !important;
+}
+.pass_bg#password {
+    background: url(../images/pass.png) 0px 0px no-repeat #fff;
+    background-size: 21px;
+    background-position: 8px 10px !important;
+}
+
+.alert.alert-danger {
+    background: #ea490b;
+}
+
+.alert.alert-warning {
+    background: #c1920c;
+}
+.alert {
+    margin-bottom: .5rem;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    border: 0;
+    padding: .75rem 1rem;
+    font-size: .8rem;
+    color: #ffffff !important;
+    display: flex;
+    align-items: center;
+}
+.model_alert_ico {
+    margin: -4px 2px 0 0;
+}
+
+.alert i {
+    font-size: 1.1rem;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+
+
+
+
+
+#content form input[type="submit"] {
+    display: inline-block;
+    font-weight: 400;
+    color: #1a8e5f;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid #1a8e5f;
+    padding: .675rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    min-width: 151px;
+    text-transform: uppercase;
+    margin: 12px 0 0 0;
+}
+
+#content form input[type="submit"]:hover {
+    color: #ffffff;
+    background-color: #1a8e5f;
+    border-color: #1a8e5f;
+}
+
+
+
+
+
+
+
+/*.btn-outline-primary {*/
+/*    color: #1a8e5f;*/
+/*    border-color: #1a8e5f;*/
+/*}*/
+/*.btn-outline-primary:hover {*/
+/*    color: #ffffff;*/
+/*    background-color: #1a8e5f;*/
+/*    border-color: #1a8e5f;*/
+/*}*/
+/*.btn-rounded {*/
+/*    -webkit-border-radius: 50px;*/
+/*    -moz-border-radius: 50px;*/
+/*    border-radius: 50px;*/
+/*}*/
+/*.btn {*/
+/*    display: inline-block;*/
+/*    font-weight: 400;*/
+/*    color: #212529;*/
+/*    text-align: center;*/
+/*    vertical-align: middle;*/
+/*    -webkit-user-select: none;*/
+/*    -moz-user-select: none;*/
+/*    -ms-user-select: none;*/
+/*    user-select: none;*/
+/*    background-color: transparent;*/
+/*    border: 1px solid transparent;*/
+/*    padding: .375rem .75rem;*/
+/*    font-size: 1rem;*/
+/*    line-height: 1.5;*/
+/*    border-radius: .25rem;*/
+/*    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;*/
+/*}*/

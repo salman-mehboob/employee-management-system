@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Create two equal columns that floats next to each other */
+        .column {
+            /*float: left;*/
+            width: 100%;
+            padding: 10px;
+            height: 33%;
+            background-color: #f6f5fa;
+
+        }
+
+        .column > h3 {
+            text-align: center;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" id="formcontent">
+    <div class="row">
+        <div class="column">
+            <div class="column">
+
+
+                <h3>Bill Details</h3>
+                <div class="card-body">
+                    <form action="#">
+                        <div class="table-container">
+                            <div class="table-responsive">
+                                <table id="basicExample" class="table custom-table">
+                                    <thead>
+                                    <tr>
+                                        <th>Status</th>
+                                        <th>Amount</th>
+                                        <th>Approved Amount</th>
+                                        <th>bill_frequency</th>
+                                        <th>Bill Type</th>
+                                        <th>Created Date</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr th:each="pen: ${requestBillsList}">
+                                        <td><span th:text="${pen.getStatus()}">Status</span></td>
+                                        <td><span th:text="${'Rs.' + #numbers.arrayFormatInteger(pen.getAmount(),3,'COMMA')}">Activity</span></td>
+                                        <td><span th:text="${'Rs.' + #numbers.arrayFormatInteger(pen.getApprovedAmount(),3,'COMMA')}">ID</span></td>
+                                        <td><span th:text="${pen.getBillFrequency()}">User Name</span></td>
+                                        <td th:text="${pen.getBillType()}">Date From</td>
+                                        <td th:text="${pen.getDateCreated()}">Date To</td>
+                                        <td class="action__bar">
+
+                                            <button class="btn btn-outline-primary btn-rounded"
+                                                    th:data-id="${pen.id}"
+                                                    onclick="showBillDetail(this.getAttribute('data-id'))"
+                                                    type="button">
+                                                Show More
+                                            </button>
+                                           <span th:if="${pen.status.toString()=='PENDING'}"> <button class="btn btn-outline-primary btn-rounded"
+                                                    th:data-id="${pen.id}"
+                                                    onclick="billUpdate(this.getAttribute('data-id'))"
+                                                    type="button">
+                                                Edit
+                                            </button></span>
+                                            &nbsp;&nbsp;&nbsp;
+
+                                        </td>
+                                    </tr>
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div th:replace="fragments/modal">
+</div>
+<div th:replace="fragments/footer :: component"></div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+</head>
+<body topmargin="0" leftmargin="0">
+
+
+<!--    <h4 class="t-header">Call Work</h4>-->
+
+<div class="alert alert-warning alert-dismissible fade show" id="serverResponse" style="display: none" align="center"
+     role="alert"><span
+        class="image model_alert_ico"><i class="icon-alert-triangle"></i></span>
+</div>
+<form name="frm" th:action="@{/saveUserSettings}" method="Post" id="authForm">
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label">Change Role</label>
+                <select class="form-control" name="role" >
+                    <option selected value="not">Select Role</option>
+                    <option th:each="role : ${role}" th:value="${role.role}" th:text="${role.role}"
+                    > role
+                    </option>
+                </select>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label">Terminate User</label>
+                <select class="form-control" name="active1">
+                    <option value="">Select Response</option>
+                    <option value="Yes">Inactive</option>
+                    <option value="No">Active</option>
+
+                </select>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div hidden class="form-group">
+        <label class="col-form-label">Authorization</label>
+
+        <select class="form-control" name="authorize">
+            <option value='1'>Authorized</option>
+            <!--<option value="2">Not Authorized</option>-->
+        </select>
+    </div>
+    <div class="buttons_margin">
+        <button type="submit" id="submit" class="btn btn-outline-success btn-rounded float-right btn_set_ico"
+                name="Save">Save <span class="icon-save2"></span></button>
+        <button type="button" class="btn btn-outline-danger btn-rounded float-right btn_set_ico"
+                data-dismiss="modal"
+                name="Cancel">Cancel <span class="icon-circle-with-cross"></span></button>
+    </div>
+    <input type="hidden" name="id" th:value="${userId}">
+</form>
+
+<script>
+    $('document').ready(function () {
+        let serverResponse = $('#serverResponse');
+        $("#authForm").submit(function (event) {
+
+            event.preventDefault();
+            let post_url = $(this).attr("action");
+            let form_data = $(this).serialize();
+            console.log(form_data);
+
+            $.post(post_url, form_data, function (data) {
+                console.log(data);
+
+                if (data === "Success") {
+                    serverResponse.html("Record Updated Successfully");
+                    serverResponse.show();
+                    $("#authForm").trigger("reset");
+
+                } else {
+                    serverResponse.html("Unable to update.");
+                    serverResponse.show();
+                }
+            })
+        })
+    })
+</script>
+</div>
+</body>
+
+</html>

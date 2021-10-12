@@ -1,0 +1,211 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head></head>
+<body topmargin="0" leftmargin="0">
+
+
+<!--    <h4 class="t-header">Call Work</h4>-->
+
+<div class="alert alert-warning alert-dismissible fade show" id="serverResponse" style="display: none" align="center"
+     role="alert"><span
+        class="image model_alert_ico"><i class="icon-alert-triangle"></i></span>
+</div>
+<form name="frm" th:action="@{/bill/saveBill}"  id="authForm" method="post" enctype="multipart/form-data">
+
+    <div class="row">
+        <div hidden class="col-md-6">
+            <div class="form-group">
+                <label class="col-form-label">Relation ID</label>
+                <input readonly class="form-control readonly_input" th:value="${employeeBillsClaim.id}">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="col-form-label">Employee Name </label>
+                <input readonly hidden class="form-control readonly_input" name="employeeID"
+                       th:value="${employeeBillsClaim.getEmployee().getId()}">
+                <input readonly class="form-control readonly_input"
+                       th:value="${employeeBillsClaim.employee.firstName + ' ' + employeeBillsClaim.employee.lastName}">
+
+            </div>
+        </div>
+        <div class="col-md-6">
+
+                <div class="form-group">
+                    <label class="control-label">Bill Type</label>
+                    <select class="form-control locker_number" name="billType" required="">
+                        <option
+                                th:each="type :${T(com.econception.employemanagement.enumeration.BillType).values()}"
+                                th:value="${type}"
+                                th:text="${type}"
+                                th:selected="${type == employeeBillsClaim.getBillType() }">Yes
+                        </option>
+
+                    </select>
+                </div>
+
+        </div>
+        <div class="col-md-6">
+
+                <div class="form-group">
+                    <label class="control-label">Bill Frequency</label>
+                    <select class="form-control locker_number" name="billFrequency" required="">
+                        <option
+                                th:each="type :${T(com.econception.employemanagement.enumeration.BillFrequency).values()}"
+                                th:value="${type}"
+                                th:text="${type}"
+                                th:selected="${type == employeeBillsClaim.getBillFrequency()}">Yes
+                        </option>
+
+                    </select>
+                </div>
+
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="col-form-label">Bill Amount</label>
+                <input name="billAmount" class="form-control readonly_input" th:value="${employeeBillsClaim.amount}" title="Enter only numbers!!!" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="col-form-label">Bill Title</label>
+                <input name="title" class="form-control readonly_input" th:value="${employeeBillsClaim.title}"
+                       title="Enter only alphabets!!!"  onkeypress="return /[a-z]/i.test(event.key)">
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="col-form-label">Status</label>
+                <input readonly th:field="*{employeeBillsClaim.status}" class="form-control readonly_input"
+                       th:value="${employeeBillsClaim.status}">
+            </div>
+        </div>
+        <div class=" gallery">
+            <div id="divcontainer" class="row gutters">
+                <div class="col-md-6" th:each="pen: ${files}">
+                    <div class="col-md-12">
+                        <button type="button" id="submitt" name="removeButton" th:onclick="'getDepId(\'' + ${pen.getId()} + '\');'"
+                                class="btn btn-outline-primary btn-rounded float-right btn_set_ico"><span
+                                class="icon-delete"></span></button>
+                      </div>
+                    <a target="_blank" th:href="@{${pen.getPhotosImagePath()}}" class="effects">
+
+                        <img th:src="@{${pen.getPhotosImagePath()}}" class="img-fluid"/>
+                        <div class="overlay">
+                            <span class="expand">+</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <input id="totalPic" name="totalPic" th:value="${totalPic}" hidden>
+
+    </div>
+    <button id="clickAuto" hidden class="btn btn-outline-primary btn-rounded"
+            th:data-id="${billID}"
+            onclick="billUpdate(this.getAttribute('data-id'))"
+            type="button">
+        Edit</span>
+    </button>
+    <!--        <div class="form-group">-->
+    <!--            <label class="col-form-label">Password</label>-->
+    <!--            <input class="form-control" type="password" name="password" placeholder="Enter password" required>-->
+    <!--        </div>-->
+
+    <button class="appendbtn btn btn-primary btn-rounded" type="button">Add More
+        <span class="icon-circle-with-plus"></span></button>
+    <div class="buttons_margin">
+        <button type="submit" id="submit" class="btn btn-outline-success btn-rounded float-right btn_set_ico"
+                name="Save">Save <span class="icon-save2"></span></button>
+        <button type="button" class="btn btn-outline-danger btn-rounded float-right btn_set_ico"
+                data-dismiss="modal"
+                name="Cancel">Cancel <span class="icon-circle-with-cross"></span></button>
+    </div>
+    <!--    <input type="hidden" name="id" th:value="${userId}">-->
+    <input type="hidden" name="id" th:value="${billID}">
+</form>
+
+<script>
+    $('document').ready(function () {
+
+        var i = 0;
+        var b=document.getElementById("totalPic").value;
+        console.log(b);
+        var limit = 5-b;
+
+        let serverResponse = $('#serverResponse');
+        $("#submit").click(function (event) {
+
+            event.preventDefault();
+            var form = $('#authForm')[0];
+
+            var data = new FormData(form);
+
+
+            data.append("CustomField", "This is some extra data, testing");
+
+            $.ajax({
+
+                type: "POST",
+                enctype: 'multipart/form-data',
+                url: "/ems/bill/saveBill",
+                data: data,
+                processData: false,
+                contentType: false,
+                cache: false,
+                timeout: 600000,
+                success: function (data) {
+                    if (data === "Success") {
+
+                        serverResponse.html("Record Updated Successfully");
+                        serverResponse.show();
+                        setTimeout(function (){$('#clickAuto').trigger('click');}, 500);
+
+
+                    } else {
+                        alert('Error');
+                    }
+
+
+                }
+
+            });
+
+        });
+        $(".appendbtn").click(function () {
+
+            if (i < limit) {
+                $("#divcontainer").append('<div class="col-md-6"> <div class="appendme">\n' +
+                    '<input class=" btn btn-primary btn-rounded chose_file_btn" id="fileUpload"  type="file" name="file" required />\n' +
+                    '</div></div> ');
+            }
+            i++;
+        });
+    })
+
+    function getDepId(id) {
+       $.ajax({
+            type:"GET",
+            url: "/ems/bill/delete?id="+id,
+            processData: false,
+            contentType: false,
+            data: id,
+            timeout: 600000,
+            success: function (data){
+                if(data === "Success"){
+
+                    $('#clickAuto').trigger('click');
+                }
+            }
+        })
+
+    }
+
+</script>
+</div>
+</body>
+
+</html>

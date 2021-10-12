@@ -1,0 +1,214 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+
+</head>
+<body topmargin="0" leftmargin="0">
+
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" id="formcontent">
+
+    <div class="main-container">
+
+        <!-- Page header start -->
+
+        <!-- Page header end -->
+
+        <div class="content-wrapperr">
+
+            <div class="row">
+
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">Bills</div>
+                        </div>
+                        <div class="alert alert-warning alert-dismissible fade show" id="serverResponse"
+                             style="display: none" align="center" role="alert"><span
+                                class="image model_alert_ico"><i class="icon-alert-triangle"></i></span>
+                        </div>
+
+                        <form id="employeeForm" action="#" name="frm" th:action="@{/bill/requestBill}"
+                              th:object="${employeeBillsClaims}" method="post" enctype="multipart/form-data"
+                              role="form">
+                            <input type="hidden" name="id">
+                            <div class="form-body">
+                                <div class="row_pad">
+                                    <div class=" row">
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label class="control-label">Employee Name</label>
+                                                <input hidden class="form-control"
+                                                       th:value="${userList.getEmployee().getId()}" type="number"
+                                                       name="employeeID">
+                                                <input type="text" class="form-control" readonly
+                                                       th:placeholder="${userList.employee.firstName + ' ' + userList.employee.middleName + ' ' + userList.employee.lastName}">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label class="control-label">Amount</label>
+                                                <input class="form-control" id="amount" type="text" name="billAmount"
+                                                       oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" placeholder="Enter Amount">
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label class="control-label">Bill Frequency</label>
+                                                <select class="form-control locker_number" name="billFrequency"
+                                                        required="">
+                                                    <option
+                                                            th:each="type :${T(com.econception.employemanagement.enumeration.BillFrequency).values()}"
+                                                            th:value="${type}"
+                                                            th:text="${type}"
+                                                            th:selected="${type == employeeBillsClaims.getBillFrequency()}">
+                                                        Yes
+                                                    </option>
+
+                                                </select>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label class="control-label">Bill Type</label>
+                                                <select class="form-control locker_number" name="billType" required="">
+                                                    <option
+                                                            th:each="type :${T(com.econception.employemanagement.enumeration.BillType).values()}"
+                                                            th:value="${type}"
+                                                            th:text="${type}"
+                                                            th:selected="${type == employeeBillsClaims.getBillType() }">
+                                                        Yes
+                                                    </option>
+
+                                                </select>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label class="control-label">Bill Title</label>
+                                                <input class="form-control" id="billTitle" type="text" name="title"
+                                                       placeholder="Bill Title">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label class="control-label">Bill Details</label>
+                                                <textarea class="form-control" style="display: flex" rows="4" cols="50"
+                                                          name="billDetail" placeholder="type your remarks"
+                                                          form="employeeForm"></textarea>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <p>
+                                                <label>Main Image</label>
+                                            </p>
+                                            <div id="divcontainer">
+                                                <div class="appendme">
+
+                                                    <input class=" btn btn-primary btn-rounded chose_file_btn"
+                                                           id="fileUpload" type="file" name="file" required/>
+                                                </div>
+
+                                            </div>
+                                            <button class="appendbtn btn btn-primary btn-rounded" type="button">Add More
+                                                <span class="icon-circle-with-plus"></span></button>
+
+
+
+
+
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <button type="submit" id="submit" name="submit"
+                                                    class="btn btn-outline-primary btn-rounded float-right btn_set_ico">
+                                                Save <span class="icon-lock_outline"></span></button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<script>
+    $('document').ready(function () {
+        var i = 1;
+        var limit = 5;
+
+
+        var serverResponse = $('#serverResponse');
+        $("#submit").click(function (event) {
+
+            event.preventDefault();
+            var form = $('#employeeForm')[0];
+
+            var data = new FormData(form);
+
+
+            data.append("CustomField", "This is some extra data, testing");
+
+            $.ajax({
+
+                type: "POST",
+                enctype: 'multipart/form-data',
+                url: "/ems/bill/requestBill",
+                data: data,
+                processData: false,
+                contentType: false,
+                cache: false,
+                timeout: 600000,
+                success: function (data) {
+                    if (data === "Success") {
+                        serverResponse.html("Record Updated Successfully");
+                        serverResponse.show();
+                    } else {
+                        alert('Error');
+                    }
+
+
+                }
+
+            });
+
+        });
+
+
+        $(".appendbtn").click(function () {
+
+            if (i < limit) {
+                $("#divcontainer").append(' <div class="appendme">\n' +
+                    // '
+                    '                                                    <input class=" btn btn-primary btn-rounded chose_file_btn" id="fileUpload"  type="file" name="file" required />\n' +
+                    '                                                </div> ');
+            }
+            i++;
+        });
+
+
+    })
+
+
+
+
+</script>
+
+<div th:replace="fragments/modal"/>
+</body>
+</html>

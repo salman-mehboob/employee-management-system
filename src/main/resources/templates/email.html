@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html  lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+<form th:action="userEmail" method="post" enctype="text/plain">
+    Name:<br>
+    <input  class="form-control readonly_input" type="text" name="name"><br>
+    E-mail:<br>
+    <input   class="form-control readonly_input" type="text" name="mail"><br>
+    Comment:<br>
+    <input  class="form-control readonly_input" type="text" name="comment" size="50"><br><br>
+    <input class="btn btn-outline-primary btn-rounded float-right btn_set_ico" type="submit" value="Send">
+    <input class="btn btn-outline-primary btn-rounded float-right btn_set_ico" type="reset" value="Reset">
+</form>
+
+</body>
+</html>

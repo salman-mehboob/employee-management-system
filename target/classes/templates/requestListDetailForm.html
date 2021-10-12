@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body topmargin="0" leftmargin="0">
+
+
+<!--    <h4 class="t-header">Call Work</h4>-->
+
+<div class="alert alert-warning alert-dismissible fade show" id="serverResponse" style="display: none" align="center"
+     role="alert"><span
+        class="image model_alert_ico"><i class="icon-alert-triangle"></i></span>
+</div>
+<form name="frm" th:action="@{/saveLeaveComUpdate}" method="Post" id="authForm">
+<div class="row">
+
+    <div class="col-md-6">
+    <div  class="form-group">
+        <label class="col-form-label">Employee Name </label>
+        <input readonly hidden class="form-control readonly_input" name="employeeID"
+               th:value="${employeeLeaves.employee.getId()}">
+        <input readonly class="form-control readonly_input"
+               th:value="${employeeLeaves.employee.firstName + ' ' + employeeLeaves.employee.lastName}">
+
+    </div>
+    </div>
+    <div class="col-md-6">
+    <div  class="form-group">
+        <label class="col-form-label">Leave type</label>
+        <input readonly hidden name="leaveCatID" class="form-control readonly_input"
+               th:value="${employeeLeaves.leavesCategories.getId()}">
+        <input readonly class="form-control readonly_input" th:value="${employeeLeaves.leavesCategories.leaveType}">
+    </div>
+    </div>
+    <div class="col-md-6">
+    <div  class="form-group">
+        <label class="col-form-label">Date From</label>
+        <input readonly class="form-control readonly_input" name="dateFrom" th:value="${employeeLeaves.dateFrom}">
+    </div>
+    </div>
+
+    <div class="col-md-6">
+    <div  class="form-group">
+        <label class="col-form-label">Date To</label>
+        <input readonly class="form-control readonly_input" name="dateTo" th:value="${employeeLeaves.dateTo}">
+    </div>
+    </div>
+    <div class="col-md-6">
+    <div class="form-group">
+        <label class="col-form-label">Status</label>
+        <input readonly class="form-control readonly_input" th:value="${employeeLeaves.status}">
+    </div>
+    </div>
+</div>
+    <!--        Comment Box start here-->
+    <label class="col-form-label">Comment</label>
+    <div id="comtBox" class="overflow-auto">
+
+        <div class="comments_sets">
+
+            <ul class="user-messages">
+                <li class="clearfix" th:each="pen: ${comtList}">
+                    <div class="comments_sets_col">
+                        <div class="customer"
+                             th:text="${#strings.substring(pen.employee.firstName, 0, 1) + #strings.substring(pen.employee.lastName,0,1)}">
+                            AM
+                        </div>
+                        <div class="delivery-details">
+                            <span class="badge badge-primary" th:text="${pen.dateCreated}">Ordered</span>
+                            <h5 th:text="${pen.employee.firstName + ' ' + pen.employee.lastName }"></h5>
+                            <p th:text="${pen.text}"></p>
+                            <input type="hidden" name="moduleId" th:value="${pen.module.id}">
+                            <input type="hidden" name="parentID" th:value="${pen.parent}">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+   <span th:if="${employeeLeaves.status.toString()=='PENDING'}"> <input class="form-control readonly_input" name="text" placeholder="Reply"></span>
+    <!--        Comment Box ends here-->
+    <br/>
+
+
+    <div hidden class="form-group">
+        <label class="col-form-label">Authorization</label>
+
+        <select class="form-control" name="authorize">
+            <option value='1'>Authorized</option>
+            <!--<option value="2">Not Authorized</option>-->
+        </select>
+    </div>
+
+
+
+    <div class="buttons_margin">
+        <span th:if="${employeeLeaves.status.toString()=='PENDING'}"><button type="submit" id="submit" class="btn btn-outline-success btn-rounded float-right btn_set_ico"
+                name="Save">Save <span class="icon-save2"></span></button></span>
+        <button type="button" class="btn btn-outline-danger btn-rounded float-right btn_set_ico"
+                data-dismiss="modal"
+                name="Cancel">Cancel <span class="icon-circle-with-cross"></span></button>
+    </div>
+    <input type="hidden" name="employeeLeaveId" th:value="${employeeLeaveId}">
+
+</form>
+
+<script>
+    $('document').ready(function () {
+        let serverResponse = $('#serverResponse');
+        $("#authForm").submit(function (event) {
+
+            event.preventDefault();
+            let post_url = $(this).attr("action");
+            let form_data = $(this).serialize();
+            console.log(form_data);
+
+            $.post(post_url, form_data, function (data) {
+                console.log(data);
+
+                if (data === "Success") {
+                    serverResponse.html("Record Updated Successfully");
+                    serverResponse.show();
+                    $("#employeeForm").trigger("reset");
+
+                } else {
+                    serverResponse.html("Unable to update.");
+                    serverResponse.show();
+                }
+            })
+        })
+    })
+</script>
+</div>
+</body>
+
+</html>

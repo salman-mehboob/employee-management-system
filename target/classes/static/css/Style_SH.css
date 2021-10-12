@@ -1,0 +1,734 @@
+
+A:visited{
+	font-family: arial;
+	text-decoration:none;
+	/*color:#073e8b;*/
+	color:black;
+	font-weight: bold
+}
+
+A{
+	font-family: arial;
+	text-decoration:none;
+    /*color:#073e8b;*/
+	color:black;
+	font-weight: bold
+}
+
+BODY{
+	font-size: 14px;	
+	margin: 0px 0px 0px 10px;
+	color: #000000;
+	font-family: arial;
+	background-color: #FFFFFF;
+	background-attachment:fixed; 	
+}
+
+legend{font-weight:bold;font-family: arial;color: #9CBA62;}
+
+TABLE{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #2f530A;
+	font-weight: bold;
+	font-size: 11px;
+	width: 97%;
+}
+
+INPUT
+{	
+	font-size: 12px;
+	font-family: Verdana;
+	/*background-color: #ffffff;*/
+	border: 1px #336699 solid;
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 11px; 
+	/*color: #336699;*/
+	vertical-align: top;
+	
+	
+}
+
+
+
+.BUTTON
+{
+	font-family: verdana;
+	font-size: 8px;
+	background-color: #F4F8FB;
+	height: 17.0px;
+}
+
+.DATEBOX
+{
+	border-right: medium none;
+	border-top: medium none;
+	font-size: 12px;
+	border-left: medium none;
+	border-bottom: medium none;
+	font-family: Arial;
+	background-color: #ffffff;
+}
+
+TEXTAREA
+{
+	font-family: Verdana;
+	font-size: 10px;
+	background-color: #ffffff;
+}
+
+textarea#styled {
+	width: 600px;
+	height: 100px;
+	border: 2px solid #cccccc;
+	padding: 5px;
+	font-family: Tahoma, sans-serif;
+	font-size: 12px;
+	/*background-image: url(bg.gif);*/
+	background-position: bottom right;
+	background-repeat: no-repeat;
+}
+
+
+SELECT{
+	font-family: Verdana;
+	font-size: 10px;
+	width:;	
+	background-color: #ffffff;
+}
+
+.TRow_Normal {
+		font-family: Verdana, Arial, Helvetica, sans-serif; 
+		font-size: 11px; 
+		/*background-color: #BDD197; 
+		background-color: #DEE8CA;*/
+		/*background-color: #b0cae5;*/
+		/*background-color: #d7e4e5;*/
+		/*background-color: #BDD197;*/
+		background-color:#F4F8FB;
+		height: 13px;	
+	}
+	
+.TRow_Alt {
+		font-family: Verdana, Arial, Helvetica, sans-serif; 
+		font-size: 11px; 
+		/*background-color: #EFF4E5;*/	/*bancassurance*/
+		/*background-color: #EFF4E5;*/
+		height: 18px;	
+}
+
+.ServerError
+{
+	font-family: arial;
+	font-weight: bold;
+	color: White;
+	background-color: Red;
+	width: 642px;
+}
+
+
+.NumericField
+{
+	text-align: right;
+	font-family: arial;
+}
+
+
+
+.RequiredField
+{
+	/*background-color: #dfebee;*/
+	/*background-color: #EFF4E5;*/
+	background-color: #F4F8FB;
+	border: 1px #336699 solid; 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 11px; 
+	/*color: #336699;*/
+	vertical-align: top;
+
+	
+}
+
+.DropDownField
+{
+	background-color: #dfebee;
+	background-color: #EFF4E5;
+	border: 1px #336699 solid; 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 11px;
+	/*color: #336699;*/
+	vertical-align: top;	
+}
+
+.EditItem
+{
+	background-color: Yellow;
+	font-family: arial;
+}
+
+
+.ListerGrid{
+        left: 14px; 
+        top: 25px;
+        overflow: auto; 
+        position: absolute; 
+        font-family: arial;
+}
+
+
+.EntityHeading
+{
+	font-size: 12px;
+	font-family: Arial;
+	/*background-color:"#cccccc";*/
+	background-color: #9CBA62;
+	color:white;
+	text-align:center;
+	font-weight:bold
+	
+}
+.ListerHeader
+{
+	font-size: 12px;
+	font-family: arial;
+	color: white;	
+	background-color:#336696;
+	cursor:hand
+}
+
+.ListerItem{
+	font-size: xx-small;
+	cursor:hand;
+	font-family: arial;
+	background-color:AliceBlue;
+    color:Black;
+}
+.ListerAlterItem{
+	font-size: xx-small;
+	background-color:White;
+	cursor:hand;
+	font-family: arial;
+	color:Black;
+	
+}
+.ListerSelItem{
+	font-size: xx-small;
+	background-color:#336696;
+	font-family: arial;
+    
+}
+
+
+.Pager
+{
+	/*width: 45px;*/
+	font-weight: bold;
+	background-color: #DEE8CA;
+	height: 1px;
+	font-size: xx-small;
+	font-family: arial;
+}
+.GridSelRow
+{
+	font-family: arial;
+}
+	
+.GridRow{
+	background-color:White;
+	font-family: arial;
+}
+	
+.ListRowAlt{
+	/*background-color:#DEE8CA;*/
+	font-family: Verdana;
+}
+
+.ListRowItem{
+	/*background-color:#BDD197;*/
+	background-color:#F4F8FB;
+	font-family: Verdana;
+}
+
+
+.GridHeader
+{
+	font-weight: bold;
+	font-size:9pt;	
+	color: white;	
+	font-family: Arial;
+	/*background-color: #9CBA62;*/
+	/*background-color: #336699;*/
+	background-color: #000066;
+}
+
+.btnHideLister{
+	position:absolute;
+	left:10;
+	top:12;
+	width:50px;
+	z-index:100;
+	border-collapse:collapse;
+	font-family: arial;
+}
+	
+	
+.EnquiryRow{
+	cursor:hand
+}	
+	
+.LabelLikeText{
+	cursor:hand; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BACKGROUND-COLOR: transparent; BORDER-BOTTOM-STYLE: none;font-family: arial;
+}		
+
+							/* Divisions */
+.TabularDiv{
+	left: 11px;
+	overflow: auto;
+	position: absolute;
+	top: 20px;
+	font-family: arial;	
+}							
+.ListerFieldSet{
+	height: 303px;
+	font-family: arial;
+	color: #9CBA62;
+	font-weight: bold;
+}
+
+.ListerDiv{
+	left: 16px;
+	overflow: auto;
+	width: 300px;
+	position: absolute;
+	top: 40px;
+	height: 500px;
+	font-family: arial;
+}
+.ListerDiv1
+{
+	top: 20px; 
+	left: 16px; 
+	overflow: auto;
+	width: 300px;
+	height: 400px;
+	position: absolute;
+	font-family:arial ;
+}
+.NormalEntryTableDiv{
+	left: 16px;
+	overflow: visible;
+	position: absolute;
+	top: 10px;
+	font-family: arial;
+	}
+
+.HeaderEntryTableDiv{
+	left: 16px;
+	overflow: visible;
+	position: absolute;
+	top: 14px;
+	font-family: arial;
+	}
+
+
+.EntryTableDiv{
+	left: 256px;
+	overflow: visible;
+	position: absolute;
+	top: 10px;
+	height:80%;
+	font-family: arial;
+}
+.GridDivWithLister{
+	left: 450px;
+	overflow: visible;
+	position: absolute;
+	top: 40px;
+	height:100%;
+	font-family: arial;
+}
+.GridDiv{
+	left: 18px;
+	overflow: visible;
+	position: absolute;
+	top: 40px;
+	height:100%;
+	font-family: arial;
+}
+.SelectionDiv{
+	left: 16px;
+	position: absolute;
+	top: 25px;
+	font-family: arial;
+}
+
+
+						/* Hide Button 
+==============================================================*/
+.btnHideLister{	
+	position:absolute;
+	left:12;
+	top:15;
+	width:50px;
+	font-family: arial;
+}
+.btnHideListerPressed{	
+	position:absolute;
+	left:12;
+	top:15;
+	width:50px;	
+	BORDER-TOP-STYLE: inset; 
+	BORDER-RIGHT-STYLE: inset;
+	BORDER-LEFT-STYLE: inset;
+	BORDER-BOTTOM-STYLE: inset;
+	font-family: arial;
+}
+.EnquiryDiv{
+	width:100%	;
+	font-family: arial;
+}
+
+.GridSelectedField
+{
+	background-color:F0E0B0;
+	font-family: arial;
+}
+
+.DHFieldCaption
+{
+	font-weight: bold;
+	font-family: arial;
+}
+.DHFieldValue
+{
+	font-family: arial;
+}
+
+.DSFieldCaption
+{
+	font-weight: bold;
+	font-family: arial;
+}
+
+
+.PageTotalRow
+{
+font-weight: bold;
+font-size: xx-small;
+margin: 0px;
+color: white;
+padding: 0px;
+border: #255b97 0px;
+font-family: Arial;
+background-color: #255b97;
+text-align: right;
+}
+
+.GrandTotalRow
+{
+font-weight: bold;
+font-size: xx-small;
+margin: 0px;
+color: white;
+padding: 0px;
+border: #255b97 0px;
+font-family: Arial;
+background-color: #255b97;
+text-align: right;
+}
+
+
+.SummaryText{ 
+
+BORDER:none; 
+
+BACKGROUND-COLOR: transparent;
+
+color:White;
+
+font-weight:bold;
+font-family: arial;
+}
+
+
+
+						/* Rowset 
+==============================================================*/
+
+.RowSetGrid{
+	left: 10px;	
+	top: 2px;
+	overflow: auto;	
+	position: absolute;		
+	font-family: arial;
+}
+
+.AcceptButton{
+	CURSOR: hand; 	COLOR: blue;	font-weight:bold;
+	font-family: arial;
+}
+.PictureControl {
+	HEIGHT:100px;WIDTH:100px;font-family: arial;
+} 
+.NumericCell
+{
+	  text-align:right; font-family: arial;
+}
+
+
+/*==============================================================
+						DatePopup
+==============================================================*/
+.MonthHeaderStyle
+{
+	color:Black;
+	background-color:#d4deef;
+	font-family:Verdana,Helvetica,Tahoma,Arial;
+	font-size:XX-Small;
+	font-weight: normal;
+}
+
+.DayHeaderStyle
+{
+	color:Black;
+	background-color:#e3eaf2;
+	font-family:Verdana,Helvetica,Tahoma,Arial;
+	font-size:XX-Small;
+	font-weight: normal;
+}
+
+.WeekdayStyle
+{
+	color:Blue;
+	background-color:White;
+	font-family:Verdana,Helvetica,Tahoma,Arial;
+	font-size:XX-Small;
+	font-weight: normal;
+}
+
+.WeekendStyle
+{
+	color:Red;
+	background-color:White;
+	font-family:Verdana,Helvetica,Tahoma,Arial;
+	font-size:XX-Small;
+	font-weight: normal;
+}
+
+.TodayDayStyle
+{
+	color:White;
+	background-color:#e3eaf2;
+	font-family:Verdana,Helvetica,Tahoma,Arial;
+	font-size:XX-Small;
+	font-weight: normal;
+}
+
+.SelectedDateStyle
+{
+	font-family:Verdana,Helvetica,Tahoma,Arial;
+	font-size:XX-Small;
+	font-weight: normal;
+}
+
+.HolidayStyle
+{
+	font-family:Verdana,Helvetica,Tahoma,Arial;
+	font-size:XX-Small;
+	font-weight: normal;
+}
+
+
+.divWaiting
+{
+	color:#000000; 
+	font-family: Verdana;
+	font-size: 12px;
+	border: solid 1px #333333;
+	background-color: 	#82CAFF;/*#99CCFF;/*#BDD197;/*#DEE8CA;*/
+	text-align:center;
+	border-left: solid 1px #333333; 
+	border-bottom: solid 2px #333333; 
+	border-right: solid 2px #333333; 
+	vertical-align:middle;
+}
+
+.TextToLable
+{
+	font-size: 12;
+	font-family: Arial;
+	background-color: #BDD197;
+	BORDER-TOP-STYLE: none; 
+	BORDER-RIGHT-STYLE: none;
+	BORDER-LEFT-STYLE: none;
+	BORDER-BOTTOM-STYLE: none;
+}
+
+.TextToLableAlt
+{
+	font-size: 12;
+	font-family: Arial;
+	background-color: #DEE8CA;
+	BORDER-TOP-STYLE: none; 
+	BORDER-RIGHT-STYLE: none;
+	BORDER-LEFT-STYLE: none;
+	BORDER-BOTTOM-STYLE: none;
+}
+
+
+.CalculatorTableDiv{
+	overflow: visible;
+	position: absolute;
+	font-family: arial;
+	}
+
+.form_heading {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#FFFFFF;
+	font-weight: bold;
+	font-size:11px;
+	vertical-align:middle;
+	padding-top:6;
+	text-align:left;
+
+	/*background-color: #91abc0;*/
+	/*background-color: #9CBA62;*/ /*previous*/
+	background-color:#336699;
+	/*background-color: #BDD197;*//*light*/
+}
+
+.DisplayOnly
+{
+	
+	filter:progid:DXImageTransform.Microsoft.Gradient(endColorstr='#F4F8FB', startColorstr='#F4F8FB', gradientType='0');
+	/*background-color: transparent;*/
+	border: 1px #336699 solid; 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 11px; 
+	vertical-align: top;
+}
+
+
+.CalendarFormat
+{
+	Color: Black; 
+}
+
+/************************/
+.displayTableHeading{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#FFFFFF;
+	font-weight: bold;
+	font-size:12px;
+	background-color: #6699cc;
+}
+
+.displayTable_row_bg {
+	background-color: #F4F8FB;
+}
+
+.displayTable_form_title {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #336699;
+	font-weight: bold;
+	font-size: 11px;
+}
+
+.displayTable_text_font{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#666666;
+	font-size:10px;
+}
+
+/************* New Style for Buttons - start ***************/
+a.button2 {
+background-image:url(..\Images\bg_btn.gif);
+background-repeat:repeat-x;
+font-weight: bold;
+font-size: 11px;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+padding: 4px 12px;
+text-align: center;
+min-width: 75px;
+line-height: 25px;
+}
+a.button2:link {
+background-image:url(..\Images\bg_btn.gif);
+background-repeat:repeat-x;
+color: #FFF;
+text-decoration: none;
+}
+a.button2:visited {
+background-image:url(..\Images\bg_btn.gif);
+background-repeat:repeat-x;
+color: #fff;
+text-decoration: none;
+
+font-weight: bold;
+font-size: 11px;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+padding: 4px 12px;
+text-align: center;
+min-width: 75px;
+line-height: 25px;
+}
+a.button2:hover {
+background-image:url(..\Images\bglight_btn.gif);
+background-repeat:repeat-x;
+color: #fff;
+text-decoration: none;
+}
+
+.button2TD 
+{
+	background-color:#f5f5f5;
+	text-align: center;
+}
+/************* New Style for Buttons - end ***************/
+
+
+/*********** Beneficiary ***************/
+.popup 
+{
+	BORDER-RIGHT: #000000 1px solid; 
+	PADDING-RIGHT: 4px; 
+	BORDER-TOP: #000000 1px solid; 
+	PADDING-LEFT: 4px; 
+	FONT-SIZE: 10px; 
+	LEFT: 0px; 
+	VISIBILITY: visible; 
+	PADDING-BOTTOM: 4px; 
+	VERTICAL-ALIGN: top; 
+	BORDER-LEFT: #000000 1px solid; 
+	COLOR: WHITE; 
+	PADDING-TOP: 4px; 
+	BORDER-BOTTOM: #000000 1px solid; 
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; 
+	POSITION: absolute; 
+	TOP: 0px; 
+	BACKGROUND-COLOR: #6699cc; 
+}
+
+/***************** Legend **************************/
+.LegendStyle
+{
+	color:#336633;
+}
+
+/***************** Address **************************/
+.LinkButtonNormal
+{
+	BACKGROUND-COLOR: #336699; 
+	color:white;
+}
+.LinkButtonNormal:hover {
+	BACKGROUND-COLOR: #ADDFFF; 
+	color: grey;
+}
+.LinkButtonSelected
+{
+	color:Gray; 
+	font-weight: bold;
+	background-color:LightSkyBlue;
+	cursor:default;
+	
+}

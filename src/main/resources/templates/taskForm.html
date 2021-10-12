@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+</head>
+<body topmargin="0" leftmargin="0">
+
+
+<!--    <h4 class="t-header">Call Work</h4>-->
+
+<div class="alert alert-warning alert-dismissible fade show" id="serverResponse1" style="display: none" align="center"
+     role="alert"><span
+        class="image model_alert_ico"><i class="icon-alert-triangle"></i></span>
+</div>
+<form name="frm" th:action="@{/tasks/saveTaskUpdate}" method="Post" id="authForm">
+    <!--    Comment Box start here-->
+
+    <div id="comtBox" class="overflow-auto">
+
+        <div class="comments_sets">
+
+            <ul class="user-messages">
+                <li class="clearfix" th:each="pen: ${comtList}">
+                    <div class="comments_sets_col">
+                        <div class="customer"
+                             th:text="${#strings.substring(pen.employee.firstName, 0, 1) + #strings.substring(pen.employee.lastName,0,1)}">
+                            AM
+                        </div>
+                        <div class="delivery-details">
+                            <span class="badge badge-primary" th:text="${pen.dateCreated}">Ordered</span>
+                            <h5 th:text="${pen.employee.firstName + ' ' + pen.employee.lastName }"></h5>
+                            <p th:text="${pen.text}"></p>
+                            <input type="hidden" name="moduleId" th:value="${pen.module.id}">
+                            <input type="hidden" name="parentID" th:value="${pen.parent}">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <span  th:if="${employeeTask.status.toString()=='pending'}"> <input class="form-control readonly_input" name="text" placeholder="Reply"></span>
+    <!--        Comment Box ends here-->
+    <br/>
+
+
+
+
+    <div class="buttons_margin">
+        <span th:if="${employeeTask.status.toString()=='pending'}"><button type="submit" id="submit" class="btn btn-outline-success btn-rounded float-right btn_set_ico"
+                                                                           name="Save">Save <span class="icon-save2"></span></button></span>
+        <button type="button" class="btn btn-outline-danger btn-rounded float-right btn_set_ico"
+                data-dismiss="modal"
+                name="Cancel">Cancel <span class="icon-circle-with-cross"></span></button>
+    </div>
+    <input type="hidden" name="employeeLeaveId" th:value="${taskId}">
+
+</form>
+
+<script>
+    $('document').ready(function () {
+        let serverResponse = $('#serverResponse1');
+        $("#authForm").submit(function (event) {
+
+            event.preventDefault();
+            let post_url = $(this).attr("action");
+            let form_data = $(this).serialize();
+            console.log(form_data);
+
+            $.post(post_url, form_data, function (data) {
+                console.log(data);
+
+                if (data === "Success") {
+                    serverResponse.html("Reply sent!!");
+                    serverResponse.show();
+                    $("#employeeForm").trigger("reset");
+
+                } else {
+                    serverResponse.html("Sending faild.");
+                    serverResponse.show();
+                }
+            })
+        })
+    })
+</script>
+
+
+</div>
+
+</body>
+
+</html>

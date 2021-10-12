@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+<head >
+    <!-- Title -->
+    <title>Login</title>
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- login css -->
+    <link rel="stylesheet" th:href="@{css/login.css}">
+    <link rel="shortcut icon" th:href="@{/img/fav.png}"/>
+</head>
+<body>
+<div class="container">
+
+    <div class="container_center">
+        <div class="container_bg_transparent">
+            <div class="logo_center">
+                <img th:src="@{/img/logo-old.png}" alt="logo">
+            </div>
+            <h5>WELCOME TO EMS</h5>
+            <section id="content">
+                <form id="Login" th:action="@{/login}" method="post">
+
+                    <fieldset>
+                        <div align="center" th:if="${param.error}" class="alert alert-danger">
+                            Invalid username and password.
+                        </div>
+                        <div align="center" th:if="${param.logout}" class="alert alert-success">
+                            You have been logged out.
+                        </div>
+                        <input type="text" class="user_bg" name="username" id="username" placeholder="Username">
+                        <input type="password" name="password" class="pass_bg" id="password" placeholder="Password">
+                        <button type="submit" class="btn btn-outline-primary btn-rounded btn_link_login">Log in</button>
+                    </fieldset>
+
+                </form>
+            </section>
+            <br/>
+            <br/>
+                <div class="forgot">
+                    <a class="btn btn-outline-primary btn-rounded btn_link_login" href="/ems/user/newEmployee">Create New
+                        Account!
+                    </a>
+                </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

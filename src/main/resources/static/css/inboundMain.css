@@ -1,0 +1,88 @@
+.btnn {
+    background: #2061c9;
+    border-radius: 12px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 11px;
+    padding: 10px 20px 10px 20px;
+    border: solid #1b6e9e 2px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    width: 160px;
+    height: 32px;
+    text-align: center;
+}
+
+.btnn:hover {
+    background: #5595fc;
+    text-decoration: none;
+}
+
+.Colour {
+    background: #2061c9;
+}
+
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+#customers td,
+#customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    background-color: #0072b8;
+}
+
+#customers tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#customers tr:hover {
+    background-color: #ddd;
+}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.datagrid table {
+    color: #333;
+    font-family: Helvetica, Arial, sans-serif;
+    width: auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.datagrid td,
+th {
+    border: 1px solid #CCC;
+    height: 30px;
+}
+
+th {
+    background: #DFDFDF;
+    /* Darken header a bit */
+    font-weight: bold;
+}
+
+td {
+    background: #FAFAFA;
+    text-align: center;
+}
+
+tr:nth-child(even) td {
+    background: #F1F1F1;
+}
+
+tr:nth-child(odd) td {
+    background: #FEFEFE;
+}

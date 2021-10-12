@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head></head>
+<body topmargin="0" leftmargin="0">
+
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" id="formcontent">
+
+    <div class="main-container">
+
+        <!-- Page header start -->
+
+        <!-- Page header end -->
+
+        <div class="content-wrapperr">
+
+            <div class="row">
+
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">Project Tasks</div>
+                        </div>
+
+                        <div class="card-body">
+                            <div class="alert alert-warning alert-dismissible fade show" id="serverResponse" style="display: none" align="center" role="alert"><span
+                                    class="image model_alert_ico"><i class="icon-alert-triangle"></i></span>
+                            </div>
+
+                            <form action="#" name="frm" th:action="@{tasks/saveTask}" id="taskForm" method="post">
+                                <input type="hidden" name="id">
+                                <div class="form-body">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label class="control-label">Department</label>
+                                                <select class="form-control" name="departmentId" id="department">
+                                                    <option>Select Department</option>
+                                                    <option th:each="department : ${depList}"
+                                                            th:value="${department.getId()}"
+                                                            th:text="${department.getName()}"
+                                                    > category
+                                                    </option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label class="control-label">Employee</label>
+                                                <select class="form-control" name="employee_id" id="employeeName">
+                                                    <option>Select Employee</option>
+
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label class="control-label">Due Date</label>
+                                                <input type="text" id="dueDate"
+                                                        class="form-control"
+                                                       placeholder="date" name="dueDate" size="30" maxlength="30"
+                                                       required="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="control-label">Description</label>
+                                                <textarea class="form-control" rows="4" cols="50" name="description"
+                                                          form="taskForm" placeholder="Type..."></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="control-label">Comment</label>
+                                                <textarea class="form-control" rows="4" cols="50" name="text"
+                                                          form="taskForm" placeholder="Type..."></textarea>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <button type="submit" id="submit" name="submit"
+                                                    class="btn btn-outline-primary btn-rounded float-right btn_set_ico">
+                                                Save <span class="icon-lock_outline"></span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $('document').ready(function () {
+
+        $('#department').change(function () {
+            var serverResponse = $('#serverResponse');
+
+            var employeeSelection = $('#employeeName');
+            var dep_id = $('#department option:selected').val();
+            if (dep_id == 0) {
+                employeeSelection.empty();
+                employeeSelection.append(
+                    $('<option></option>').val('').html('Select Employee')
+                );
+                return;
+            }
+            var action_url = "/ems/tasks/findEmployeeByDepartment";
+            $.get(action_url, {dep_id: dep_id}, function (data) {
+                if (data.indexOf('no employee') != -1) {
+                    serverResponse.addClass('alert-warning');
+                    serverResponse.html(data);
+                    serverResponse.show();
+                    employeeSelection.empty();
+                    employeeSelection.append(
+                        $('<option></option>').val('').html('Select Employee')
+                    );
+                } else {
+                    employeeSelection.empty();
+                    employeeSelection.append(
+                        $('<option></option>').val('').html('Select Employee')
+                    );
+                    $.each(data, function (i, item) {
+                        employeeSelection.append(
+                            $('<option></option>').val(item.id).html(item.firstName + ' ' + item.lastName)
+                        );
+
+                    });
+                    serverResponse.hide();
+                }
+            });
+        });
+        let serverResponse = $('#serverResponse');
+        $("#taskForm").submit(function (event) {
+
+            event.preventDefault();
+            let post_url = $(this).attr("action");
+            let form_data = $(this).serialize();
+            console.log(form_data);
+
+            $.post(post_url, form_data, function (data) {
+                console.log(data);
+
+                if (data === "Success") {
+                    serverResponse.html("Task added successfully");
+                    serverResponse.show();
+                    $("#taskForm").trigger("reset");
+
+                } else {
+                    serverResponse.html("Unable to add.");
+                    serverResponse.show();
+                }
+            })
+        })
+    });
+    $('#dueDate').daterangepicker({
+        alwaysShowCalendars: true,
+        showCustomRangeLabel: true,
+        minDate: new Date(),
+        singleDatePicker: true,
+        showDropdowns: true,
+        autoUpdateInput: true,
+        locale: {
+            cancelLabel: 'Clear',
+            format: 'YYYY-DD-MM'
+        },
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: head">
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        h3 {
+            text-align: center !important;
+        }
+
+        /* Create two equal columns that floats next to each other */
+        .column {
+            /*float: left;*/
+            width: 100%;
+            padding: 10px;
+            height: 33%;
+            background-color: #f6f5fa;
+
+        }
+
+        .col-md-12 > h3 {
+            text-align: center;
+            display: ruby-text-container;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+
+
+    <!-- *************
+			************ Common Css Files *************
+		************ -->
+
+<body>
+
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" id="formcontent">
+    <div class="row">
+        <div class="col-md-12">
+            <h3 style="text-align: center !important;" >Leave Details</h3>
+            <div class="card-body">
+                <form action="#">
+                    <div class="table-container">
+                        <div class="table-responsive">
+                            <table id="basicExample" class="table custom-table">
+                                <thead>
+                                <tr>
+                                    <th>Status</th>
+                                    <th>Employee Name</th>
+                                    <th>Date From</th>
+                                    <th>Date To</th>
+                                    <th>Action</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr th:each="pen: ${requestLeavesList}">
+                                    <td><span th:text="${pen.getStatus()}">Status</span></td>
+                                    <td><span
+                                            th:text="${pen.employee.getFirstName() + ' ' + pen.employee.getLastName()}">User Name</span>
+                                    </td>
+                                    <td th:text="${pen.getDateFrom()}">Date From</td>
+                                    <td th:text="${pen.getDateTo()}">Date To</td>
+                                    <td>
+                                        <button class="btn btn-outline-primary btn-rounded"
+                                                th:data-id="${pen.id}"
+                                                onclick="requestListDetail(this.getAttribute('data-id'))"
+                                                type="button">
+                                            Detail
+                                        </button>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div th:replace="fragments/modal">
+</div>
+<div th:replace="fragments/footer :: component"></div>
+</body>
+</html>

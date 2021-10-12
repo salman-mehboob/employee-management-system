@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: head">
+    <style>
+        .reporting_main_css .doc-block {
+            padding: 1rem 0.5rem !important;
+        }
+
+        .reporting_main_css .doc-block .doc-title {
+            font-size: .8rem !important;
+            text-align: center !important;
+        }
+    </style>
+</head>
+<body topmargin="0" leftmargin="0">
+
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" id="formcontent">
+
+    <div class="main-container">
+
+
+        <!-- Content wrapper start -->
+        <div class="content-wrapper w_bg">
+            <div class="documentsContainerScroll">
+                <div class="documents-body">
+                    <!-- Row start -->
+                    <div class="row gutters">
+
+                        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-6">
+                            <div class="doc-block">
+                                <div class="doc-icon">
+                                    <div class="text-avatar dark md">BC</div>
+                                </div>
+                                <div class="doc-title">Bill Claims</div>
+                                <a href="#" role="button" onclick="loadContent('/billsClaimsHistory');"
+                                   class="btn btn-primary btn-lg">View</a>
+                            </div>
+                        </div>
+
+
+                        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-6">
+                            <div class="doc-block">
+                                <div class="doc-icon">
+                                    <div class="text-avatar danger md">LR</div>
+                                </div>
+                                <div class="doc-title">Leaves Request</div>
+                                <a href="#" role="button" onclick="loadContent('/leavesClaimsHistory');"
+                                   class="btn btn-primary btn-lg">View</a>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-6">
+                            <div class="doc-block">
+                                <div class="doc-icon">
+                                    <div class="text-avatar warning md">AT</div>
+                                </div>
+                                <div class="doc-title">Assigned Task</div>
+                                <a href="#" role="button" onclick="loadContent('/tasks/tasksDetails');"
+                                   class="btn btn-primary btn-lg">View</a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <!-- Row end -->
+                </div>
+            </div>
+
+        </div>
+        <!-- Content wrapper end -->
+
+
+    </div>
+
+
+</div>
+<div th:replace="fragments/footer :: component"></div>
+</body>
+</html>

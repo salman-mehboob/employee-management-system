@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <style>
+        span.alert.alert-warning.alert-dismissible.fade.show.goRight {
+            height: 13% !important;
+            width: fit-content !important;}
+        a.goRight{
+            height: 13% !important;
+            width: fit-content !important;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Button used to open the contact form - fixed at the bottom of the page */
+        .open-button {
+            background-color: #0d7523;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            opacity: 0.8;
+            position: fixed;
+            bottom: 23px;
+            right: 28px;
+            width: 280px;
+        }
+
+        /* The popup form - hidden by default */
+        .form-popup {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            right: 15px;
+            border: 3px solid #f1f1f1;
+            z-index: 9;
+        }
+
+        /* Add styles to the form container */
+        .form-container {
+            max-width: 300px;
+            padding: 10px;
+            background-color: white;
+        }
+
+        /* Full-width input fields */
+        .form-container input[type=text], .form-container input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        /* When the inputs get focus, do something */
+        .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        /* Set a style for the submit/login button */
+        .form-container .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 10px;
+            opacity: 0.8;
+        }
+
+        /* Add a red background color to the cancel button */
+        .form-container .cancel {
+            background-color: red;
+        }
+
+        /* Add some hover effects to buttons */
+        .form-container .btn:hover, .open-button:hover {
+            opacity: 1;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Create two equal columns that floats next to each other */
+        .column {
+            /*float: left;*/
+            width: 100%;
+            padding: 10px;
+            height: 33%;
+            background-color: #f5f6fa;
+
+        }
+
+        .column > h3 {
+            text-align: center;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+
+
+<body>
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" id="formcontent">
+    <h3>Bill Reports</h3>
+    <div class="row">
+
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Company Wide Report</div>
+                </div>
+
+                <div class="card-body">
+                    <input type="hidden" name="id">
+                    <div class="form-body">
+                        <div class="row">
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="control-label">From date</label>
+                                    <input type="text" id="fromDate"
+                                            class="form-control"
+                                           placeholder="date" value=""
+                                            name="fromDate" size="30" maxlength="30"
+                                           required>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="control-label">To date</label>
+                                    <input type="text" id="toDate"
+                                            class="form-control"
+                                           placeholder="date" value="" name="toDate" size="30" maxlength="30"
+                                           required>
+                                </div>
+                            </div>
+                            <div   class="col-md-4">
+                                <a type="button" class="goRight" onclick="myFunction1()"><span class="alert alert-warning alert-dismissible fade show goRight">For Employee Wide Report Press here<i class="icon-chevron-down"></i></span></a>
+                            </div>
+                            <div   class="col-md-4">
+
+                                <div id="departmentDiv" style="display: none" class="form-group">
+                                    <label class="control-label">Department</label>
+                                    <select class="form-control" name="departmentId" id="department">
+                                        <option> Select Department </option>
+                                        <option th:each="dep : ${departmentList}"
+                                                th:value="${dep.getId()}"
+                                                th:text="${dep.getName()}"
+                                        >
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div id="employeeDiv" style="display: none" class="col-md-4">
+                                <div class="form-group">
+                                    <label class="control-label">Employee</label>
+                                    <select class="form-control" name="empId" id="employeeName">
+                                        <option selected value="0">Select Employee</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-12 butons_margin">
+                                <button type="submit" id="submit" name="submit" onclick="myFunction()"
+                                        class="btn btn-primary btn-rounded float-right btn_set_ico">Submit
+                                    <span class="icon-lock_outline"></span></button>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 padd_l_0 padd_r_0">
+        <hr>
+    </div>
+
+
+    <div th:if="${check == 1}" id="tableLeave">
+        <div class="table-container">
+            <div class="t-header">Report</div>
+            <div class="clearfix"></div>
+            <div class="h_17"></div>
+            <div class="table-responsive">
+                <table id="basicTable" class="table custom-table m-0">
+                    <thead>
+                    <h5>MEDICAL TYPE BILLS</h5>
+                    <tr>
+
+                        <th>STATUS</th>
+                        <th>Total</th>
+                        <th>Total Claim Amount</th>
+                        <th>Total Approved Amount</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    <tr th:each="stat:${temp}">
+
+                        <td ><span th:text="${stat.getBillStatus()}">Activity</span></td>
+                        <td><span th:text="${stat.getBillCount()}">Activity</span></td>
+                        <td ><span th:text="${'Rs. ' + #numbers.arrayFormatInteger(stat.getClaimAmount(),3,'COMMA')}">Activity</span></td>
+                        <td><span th:text="${'Rs. ' + #numbers.arrayFormatInteger(stat.getApprovedAmount(),3,'COMMA')}">Activity</span></td>
+
+
+                    </tr>
+
+                    </tbody>
+
+
+                </table>
+
+            </div>
+        </br>
+            <div class="table-responsive">
+                <table id="basicTable1" class="table custom-table m-0">
+                    <thead>
+                    <h5>TRAVEL TYPE BILLS</h5>
+                    <tr>
+
+
+                        <th>STATUS</th>
+                        <th>Total</th>
+                        <th>Total Claim Amount</th>
+                        <th>Total Approved Amount</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    <tr th:each="stat:${temp1}">
+                        <td ><span th:text="${stat.getBillStatus()}">Activity</span></td>
+                        <td><span th:text="${stat.getBillCount()}">Activity</span></td>
+                        <td ><span  th:text="${'Rs. ' + #numbers.arrayFormatInteger(stat.getClaimAmount(),3,'COMMA')}">Activity</span></td>
+                        <td><span th:text="${'Rs. ' + #numbers.arrayFormatInteger(stat.getApprovedAmount(),3,'COMMA')}">Activity</span></td>
+
+
+                    </tr>
+
+                    </tbody>
+
+
+                </table>
+
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+<div th:replace="fragments/footer :: component"></div>
+<script>
+
+
+    $('#department').change(function () {
+        var serverResponse = $('#serverResponse');
+
+        var employeeSelection = $('#employeeName');
+        var dep_id = $('#department option:selected').val();
+        if (dep_id == 0) {
+            employeeSelection.empty();
+            employeeSelection.append(
+                $('<option></option>').val('').html('Select Employee')
+            );
+            return;
+        }
+        var action_url = "/ems/tasks/findEmployeeByDepartment";
+        $.get(action_url, {dep_id: dep_id}, function (data) {
+            if (data.indexOf('no employee') != -1) {
+                serverResponse.addClass('alert-warning');
+                serverResponse.html(data);
+                serverResponse.show();
+                employeeSelection.empty();
+                employeeSelection.append(
+                    $('<option></option>').val('').html('Select Employee')
+                );
+            } else {
+                employeeSelection.empty();
+                employeeSelection.append(
+                    $('<option></option>').val('').html('Select Employee')
+                );
+                $.each(data, function (i, item) {
+                    employeeSelection.append(
+                        $('<option></option>').val(item.id).html(item.firstName + ' ' + item.lastName)
+                    );
+
+                });
+                serverResponse.hide();
+            }
+        });
+    });
+
+
+    $('#fromDate').daterangepicker({
+        alwaysShowCalendars: true,
+        showCustomRangeLabel: true,
+        minDate: '2000-01-01',
+        singleDatePicker: true,
+        showDropdowns: true,
+        autoUpdateInput: true,
+        locale: {
+            cancelLabel: 'Clear',
+            format: 'YYYY-DD-MM'
+        },
+    });
+
+    $('#fromDate').on('change', function() {
+        $('#toDate').daterangepicker({
+            alwaysShowCalendars: true,
+            showCustomRangeLabel: true,
+            minDate: moment($('#fromDate').val(), "YYYY-DD-MM").add(1, 'd'),
+            singleDatePicker: true,
+            showDropdowns: true,
+            autoUpdateInput: true,
+            locale: {
+                cancelLabel: 'Clear',
+                format: 'YYYY-DD-MM'
+            },
+        });
+    });
+
+    function myFunction(){
+        let fromDate = document.getElementById("fromDate").value;
+        let toDate = document.getElementById("toDate").value;
+        let empId = $('#employeeName option:selected').val();
+
+
+        loadContent("/findBillReport?fromDate=" + fromDate + "&toDate=" + toDate + "&empId=" + empId);
+    }
+    function myFunction1(){
+        document.getElementById("employeeDiv").style.display = "block";
+        document.getElementById("departmentDiv").style.display = "block";
+    }
+
+
+
+
+
+
+</script>
+</body>
+</html>

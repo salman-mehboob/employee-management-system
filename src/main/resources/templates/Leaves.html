@@ -1,0 +1,170 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: head">
+<body topmargin="0" leftmargin="0">
+
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" id="formcontent">
+
+    <div class="main-container">
+
+        <!-- Page header start -->
+
+        <!-- Page header end -->
+
+        <div class="content-wrapperr">
+
+            <div class="row">
+
+                <div class="col-lg-12">
+                    <div class="card">
+
+                        <div class="card-header">
+                            <div class="card-title">Leaves</div>
+                        </div>
+                        <!--
+                        <div class="card-header">
+                            <div class="card-title"><h3>Leaves</h3></div>
+                        </div>
+                        -->
+                        <div class="alert alert-warning alert-dismissible fade show" id="serverResponse"
+                             style="display: none" align="center" role="alert"><span
+                                class="image model_alert_ico"><i class="icon-alert-triangle"></i></span>
+                        </div>
+
+                        <div class="card-body">
+                            <form action="#" autocomplete="off" th:object="${userList}" th:action="@{/leave/requestLeave}" name="frm"
+                                  id="lockerForm" method="post">
+                                <input type="hidden" name="id">
+                                <div class="form-body">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label class="control-label">Employee Name</label>
+                                                <input hidden class="form-control"
+                                                       th:value="${userList.getEmployee().getId()}" type="number"
+                                                       name="employeeID">
+                                                <input type="text" class="form-control" readonly
+                                                       th:placeholder="${userList.employee.firstName + ' ' + userList.employee.middleName + ' ' + userList.employee.lastName}">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label class="control-label">Leave Type</label>
+                                                <select class="form-control locker_number" name="employeeLeaveId">
+                                                    <option>Select Leave Type</option>
+                                                    <option th:each="list:${leavesCategoriesList}" th:value="${list.id}"
+                                                            th:text="${list.leaveType}">No
+                                                    </option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label class="control-label">From Date</label>
+                                                <input type="text" id="fromDate"
+                                                        class="form-control"
+                                                       min=date()
+                                                       placeholder="date" name="dateFrom" size="30" maxlength="30"
+                                                       required="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label class="control-label">To Date</label>
+                                                <input type="text" id="toDate"
+                                                       class="form-control"
+                                                       placeholder="date" name="dateTo" size="30" maxlength="30"
+                                                       required="">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="control-label">Comments</label>
+                                                <textarea style="display: flex" class="form-control" rows="4" cols="50"
+                                                          name="text" form="lockerForm"
+                                                          placeholder="Type Comment"></textarea>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-md-12">
+                                            <button type="submit" id="submit" name="submit"
+                                                    class="btn btn-outline-primary btn-rounded float-right btn_set_ico">
+                                                Submit <span class="icon-lock_outline"></span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div th:replace="fragments/footer :: component"></div>
+<script>
+    $('document').ready(function () {
+        var serverResponse = $('#serverResponse');
+        $("#lockerForm").submit(function (event) {
+
+            event.preventDefault();
+            var post_url = $(this).attr("action");
+            var form_data = $(this).serialize();
+            console.log(form_data);
+
+            $.post(post_url, form_data, function (data) {
+                console.log(data);
+
+                if (data == "Success") {
+                    serverResponse.html("Leave request submitted successfully");
+                    serverResponse.show();
+                    $("#lockerForm").trigger("reset");
+
+                } else {
+                    serverResponse.html("Request submission failed!");
+                    serverResponse.show();
+                }
+
+                serverResponse.show();
+            })
+        })
+    })
+
+
+
+    $('#fromDate').daterangepicker({
+        alwaysShowCalendars: true,
+        showCustomRangeLabel: true,
+        minDate: new Date(),
+        singleDatePicker: true,
+        showDropdowns: true,
+        autoUpdateInput: true,
+        locale: {
+            cancelLabel: 'Clear',
+            format: 'YYYY-DD-MM'
+        },
+    });
+
+    $('#fromDate').on('change', function() {
+        $('#toDate').daterangepicker({
+            alwaysShowCalendars: true,
+            showCustomRangeLabel: true,
+            minDate: moment($('#fromDate').val(), "YYYY-DD-MM").add(1, 'd'),
+            singleDatePicker: true,
+            showDropdowns: true,
+            autoUpdateInput: true,
+            locale: {
+                cancelLabel: 'Clear',
+                format: 'YYYY-DD-MM'
+            },
+        });
+    });
+
+
+</script>
+</body>
+</html>

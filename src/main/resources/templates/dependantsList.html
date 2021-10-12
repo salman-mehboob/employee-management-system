@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+
+
+<body>
+<div class="containerr">
+    <div class="wrapper">
+
+
+        <!-- Page Content  -->
+        <div id="content">
+
+
+            <div class="employees" align="center">
+                <div id="task" class="table-container">
+                    <div class="t-header">Dependants Record</div>
+                    <div class="table-responsive">
+                        <table id="basicExample" class="table custom-table">
+                            <thead>
+                            <tr>
+                                <th scope="col">Employee Name</th>
+                                <th scope="col">Dependant First Name</th>
+                                <th scope="col">Dependant Last Name</th>
+                                <th scope="col">Dependant Date of Birth</th>
+                                <th scope="col">Dependant Relation</th>
+                                <th scope="col">Date Created</th>
+                                <th scope="col">Actions</th>
+
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr th:each="em : ${dep}">
+                                <td th:text="${em.employee.firstName + ' ' + em.employee.lastName}">Employee Name</td>
+                                <td th:text="${em.firstName}">Dependant First Name</td>
+                                <td th:text="${em.lastName}">Dependant Last Name</td>
+                                <td th:text="${em.DOB}">Dependant Date of Birth</td>
+                                <td th:text="${em.dependantsRelation}">Dependant Relation</td>
+                                <td th:text="${em.dataCreated}">Date Created</td>
+                                <td STYLE="display: flex" class="action__bar">
+
+                                    <button class="btn btn-outline-primary btn-rounded"
+                                            th:data-id="${em.id}"
+                                            onclick="depUpdate(this.getAttribute('data-id'))"
+                                            type="button">
+                                        Edit</span>
+                                    </button>
+                                    <button class="btn btn-outline-primary btn-rounded"
+                                            th:data-id="${em.id}"
+                                            th:onclick="'getDepId(\'' + ${em.id} + '\');'"
+                                            type="button">
+                                        Delete</span>
+                                    </button>
+
+
+                                </td>
+
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div th:replace="fragments/modal"></div>
+</div>
+<script>
+    $('document').ready(function () {
+        let serverResponse = $('#serverResponse');
+        $("#frm").submit(function (event) {
+
+            event.preventDefault();
+            let post_url = $(this).attr("action");
+            let form_data = $(this).serialize();
+            console.log(form_data);
+
+            $.post(post_url, form_data, function (data) {
+                console.log(data);
+
+                if (data === "Success") {
+                    let url = "/dependants/showDependantsList";
+                    loadContent(url);
+
+                }
+            })
+        })
+    })
+
+    function getDepId(id) {
+        loadContent("/dependants/delete?id=" + id);
+
+    }
+</script>
+<div th:replace="fragments/footer :: component"></div>
+</body>
+</html>

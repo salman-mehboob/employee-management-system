@@ -1,0 +1,205 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+
+</head>
+<body topmargin="0" leftmargin="0">
+
+
+<form method="POST" th:object="${employeeBillsClaim}" th:action="@{/file/uploadFile}" enctype="multipart/form-data"
+      id="authForm">
+
+    <input readonly class="form-control" th:value="${employeeBillId1}" type="text" name="id">
+
+    <div hidden class="form-group">
+        <label class="col-form-label">Employee Name </label>
+        <input readonly hidden class="form-control readonly_input" name="employee"
+               th:value="${employeeBillsClaim.getEmployee().getId()}">
+        <input readonly class="form-control readonly_input"
+               th:value="${employeeBillsClaim.employee.firstName + ' ' + employeeBillsClaim.employee.lastName}">
+
+    </div>
+
+    <div hidden class="form-group">
+        <label class="control-label">Bill Type</label>
+        <select class="form-control locker_number" th:field="*{billType}" name="billType" required="">
+            <option
+                    th:each="type :${T(com.econception.employemanagement.enumeration.BillType).values()}"
+                    th:value="${type}"
+                    th:text="${type}"
+                    th:selected="${type == employeeBillsClaim.getBillType() }">Yes
+            </option>
+
+        </select>
+    </div>
+
+    <div hidden class="form-group">
+        <label class="control-label">Bill Frequency</label>
+        <select class="form-control locker_number" name="billFrequency" required="">
+            <option
+                    th:each="type :${T(com.econception.employemanagement.enumeration.BillFrequency).values()}"
+                    th:value="${type}"
+                    th:text="${type}"
+                    th:selected="${type == employeeBillsClaim.getBillFrequency()}">Yes
+            </option>
+
+        </select>
+    </div>
+
+
+    <div hidden class="form-group">
+        <label class="col-form-label">Bill Amount</label>
+        <input name="amount" class="form-control readonly_input" th:value="${employeeBillsClaim.amount}">
+    </div>
+
+    <div hidden class="form-group">
+        <label class="col-form-label">Date Created</label>
+        <input class="form-control readonly_input" name="dateCreated" th:value="${employeeBillsClaim.dateCreated}">
+    </div>
+
+    <div hidden class="form-group">
+        <label class="col-form-label">Bill Title</label>
+        <input name="title" class="form-control readonly_input" th:value="${employeeBillsClaim.title}">
+    </div>
+
+    <div hidden class="form-group">
+        <label class="col-form-label">Status</label>
+        <input readonly th:field="*{status}" class="form-control readonly_input"
+               th:value="${employeeBillsClaim.status}">
+    </div>
+    <div class="row">
+        <div class="col-border m-3">
+            <p>
+                <label>Main Image</label>
+            </p>
+            <p>
+                <img id="thumbnail" th:src="@{${employeeBillsClaim.getPhotosImagePath()}}" alt="Logo Preview"
+                     height="150" width="150">
+                <input id="fileUpload" type="file" name="file" required/>
+            </p>
+        </div>
+
+        <div class="col-border m-3">
+            <p>
+                <label>Extra Image#1</label>
+            </p>
+            <p>
+                <img id="thumbnail0" th:src="@{${employeeBillsClaim.getPhotosImagePath1()}}" alt="Logo Preview"
+                     height="150" width="150">
+                <input id="fileUpload1" type="file" name="extraImage" required/>
+            </p>
+        </div>
+
+        <div class="col-border m-3">
+            <p>
+                <label>Extra Image#2</label>
+            </p>
+            <p>
+                <img id="thumbnail1" th:src="@{${employeeBillsClaim.getPhotosImagePath2()}}" alt="Logo Preview"
+                     height="150" width="150">
+                <input id="fileUpload4" type="file" name="extraImage" required/>
+            </p>
+        </div>
+        <div class="col-border m-3">
+            <p>
+                <label>Extra Image#3</label>
+            </p>
+            <p>
+
+                <img id="thumbnail2" th:src="@{${employeeBillsClaim.getPhotosImagePath3()}}" alt="Logo Preview"
+                     height="150" width="150">
+                <input id="fileUpload5" type="file" name="extraImage" required/>
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="col-md-12">
+        <button type="submit" id="submit" name="submit"
+                class="btn btn-outline-primary btn-rounded float-right btn_set_ico">Upload
+        </button>
+    </div>
+
+    <input type="hidden" name="id" th:value="${employeeBillId1}">
+</form>
+<script>
+    $('document').ready(function () {
+        var x = document.getElementById("fileUpload").required = true;
+        var a = document.getElementById("fileUpload1").required = true;
+        var b = document.getElementById("fileUpload4").required = true;
+        var c = document.getElementById("fileUpload5").required = true;
+        $("#submit").click(function (event) {
+            event.preventDefault();
+            var from1 = $('#authForm')[0];
+
+            var data = new FormData(from1);
+
+
+            // $("#submit").prop("disabled", true);
+
+            $.ajax({
+
+                type: "POST",
+                enctype: 'multipart/form-data',
+                url: "/ems/file/uploadFile",
+                data: data,
+                processData: false,
+                contentType: false,
+                cache: false,
+                timeout: 600000,
+                success: function (data) {
+                    if (data === "Success") {
+                        alert("successful");
+                    } else {
+                        alert('Error');
+                    }
+
+
+                }
+
+            });
+
+        });
+
+
+        $('#fileUpload').change(function () {
+            showImageThumbnail(this);
+        });
+        $("input[name='extraImage']").each(function (index) {
+            $(this).change(function () {
+                showExtraImageThumbnail(this, index);
+            });
+        });
+
+
+    });
+
+    function showImageThumbnail(fileInput) {
+        file = fileInput.files[0];
+        reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#thumbnail').attr('src', e.target.result);
+        };
+        reader.readAsDataURL(file);
+    }
+
+    function showExtraImageThumbnail(fileInput, index) {
+        file = fileInput.files[0];
+        reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#thumbnail' + index).attr('src', e.target.result);
+        };
+        reader.readAsDataURL(file);
+    }
+
+
+</script>
+
+
+</body>
+
+</html>

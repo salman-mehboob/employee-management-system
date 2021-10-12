@@ -1,0 +1,169 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head></head>
+<body topmargin="0" leftmargin="0">
+
+<!--    <h4 class="t-header">Call Work</h4>-->
+
+<div class="alert alert-warning alert-dismissible fade show" id="serverResponse" style="display: none" align="center"
+     role="alert"><span
+        class="image model_alert_ico"><i class="icon-alert-triangle"></i></span>
+</div>
+<form name="frm" th:action="@{/bill/saveBillComUpdate}" method="Post" id="authForm">
+
+    <div class="row">
+        <div hidden class="col-md-6">
+            <div class="form-group">
+                <label class="col-form-label">Relation ID</label>
+                <input readonly class="form-control readonly_input" th:value="${employeeBillsClaim.getId()}">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="col-form-label">Employee Name </label>
+                <input readonly hidden class="form-control readonly_input" name="employeeID"
+                       th:value="${employeeBillsClaim.getEmployee().getId()}">
+                <input readonly class="form-control readonly_input"
+                       th:value="${employeeBillsClaim.employee.firstName + ' ' + employeeBillsClaim.employee.lastName}">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="col-form-label">Bill Type</label>
+                <!--        <input readonly hidden name="leavesCategories" class="form-control readonly_input"  th:value="${employeeBillsClaim.getBillType()}">-->
+                <input readonly name="billType" class="form-control readonly_input"
+                       th:value="${employeeBillsClaim.billType}">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="col-form-label">Bill Frequency</label>
+                <input readonly name="billFrequency" class="form-control readonly_input"
+                       th:value="${employeeBillsClaim.billFrequency}">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="col-form-label">Bill Amount</label>
+                <input readonly name="amount" class="form-control readonly_input"
+                       th:value="${'Rs.' + #numbers.arrayFormatInteger(employeeBillsClaim.amount,3,'COMMA')}">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="col-form-label">Date Created</label>
+                <input readonly class="form-control readonly_input" name="dateCreated"
+                       th:value="${employeeBillsClaim.dateCreated}">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="col-form-label">Bill Title</label>
+                <input readonly name="title" class="form-control readonly_input" th:value="${employeeBillsClaim.title}">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="col-form-label">Status</label>
+                <input readonly class="form-control readonly_input" th:value="${employeeBillsClaim.status}">
+            </div>
+        </div>
+    </div>
+    <!--        Comment Box start here-->
+    <label class="col-form-label">Comment</label>
+    <div id="comtBox" class="overflow-auto">
+
+        <div class="comments_sets">
+
+            <ul class="user-messages">
+                <li class="clearfix" th:each="pen: ${comtList}">
+                    <div class="comments_sets_col">
+                        <div class="customer"
+                             th:text="${#strings.substring(pen.employee.firstName, 0, 1) + #strings.substring(pen.employee.lastName,0,1)}">
+                            AM
+                        </div>
+                        <div class="delivery-details">
+                            <span class="badge badge-primary" th:text="${pen.dateCreated}">Ordered</span>
+                            <h5 th:text="${pen.employee.firstName + ' ' + pen.employee.lastName }"></h5>
+                            <p th:text="${pen.text}"></p>
+                            <input type="hidden" name="moduleId" th:value="${pen.module.id}">
+                            <input type="hidden" name="parentID" th:value="${pen.parent}">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <button hidden id="clickAuto" class="btn btn-outline-primary btn-rounded"
+            th:data-id="${billID}"
+            onclick="showBillDetail(this.getAttribute('data-id'))"
+            type="button">
+        Show More
+    </button>
+
+    <span th:if="${employeeBillsClaim.status.toString()=='PENDING'}"><input class="form-control readonly_input" name="billDetail" placeholder="Reply"></span>
+    <!--        Comment Box ends here-->
+    <br/>
+
+    <div class="baguetteBoxThree gallery">
+        <div class="row gutters">
+            <div class="col-md-4" th:each="pen: ${files}">
+                <a target="_blank" th:href="@{${pen.getPhotosImagePath()}}" class="effects">
+
+                    <img th:src="@{${pen.getPhotosImagePath()}}" class="img-fluid"/>
+                    <div class="overlay">
+                        <span class="expand">+</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!--        <div class="form-group">-->
+    <!--            <label class="col-form-label">Password</label>-->
+    <!--            <input class="form-control" type="password" name="password" placeholder="Enter password" required>-->
+    <!--        </div>-->
+
+    <div class="buttons_margin">
+       <span th:if="${employeeBillsClaim.status.toString()=='PENDING'}"> <button type="submit" id="submit" class="btn btn-outline-success btn-rounded float-right btn_set_ico"
+                      name="Save">Save <span class="icon-save2"></span></button></span>
+        <button type="button" class="btn btn-outline-danger btn-rounded float-right btn_set_ico"
+                data-dismiss="modal"
+                name="Cancel">Cancel <span class="icon-circle-with-cross"></span></button>
+    </div>
+    <!--    <input type="hidden" name="id" th:value="${employeeBillId}">-->
+</form>
+
+<script>
+    $('document').ready(function () {
+        let serverResponse = $('#serverResponse');
+        $("#authForm").submit(function (event) {
+
+            event.preventDefault();
+            let post_url = $(this).attr("action");
+            let form_data = $(this).serialize();
+            console.log(form_data);
+
+            $.post(post_url, form_data, function (data) {
+                console.log(data);
+
+                if (data === "Success") {
+                    serverResponse.html("Record Updated Successfully");
+                    serverResponse.show();
+                    setTimeout(function (){$('#clickAuto').trigger('click');}, 500);
+                  //  $("#authForm").trigger("reset");
+
+                } else {
+                    serverResponse.html("Unable to update.");
+                    serverResponse.show();
+                }
+            })
+        })
+    })
+</script>
+</div>
+</body>
+
+</html>

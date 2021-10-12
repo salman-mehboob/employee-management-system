@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: head"></head>
+<body topmargin="0" leftmargin="0">
+
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" id="formcontent">
+
+    <div class="main-container">
+
+
+        <div class="content-wrapper">
+
+            <div class="row">
+
+
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">Department</div>
+                        </div>
+                        <div class="alert alert-warning alert-dismissible fade show" id="serverResponse"
+                             style="display: none" align="center" role="alert"><span
+                                class="image model_alert_ico"><i class="icon-alert-triangle"></i></span>
+                        </div>
+                        <div class="card-body">
+                            <form id="frm" autocomplete="on" action="#" th:action="@{/saveDepartment}"
+                                  method="post"
+                                  role="form">
+                                <div class="form-body">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label class="control-label">Add New Department</label>
+                                                <div class="form-group">
+                                                    <input type="text" name="name" required class="form-control"
+                                                           placeholder="Name">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12 butons_margin">
+                                            <button type="submit" id="submit" name="submit"
+                                                    class="btn btn-primary btn-rounded float-right btn_set_ico">Add
+                                                <span class="icon-lock_outline"></span></button>
+                                        </div>
+                                    </div>
+                                    <!--/row-->
+
+                                </div>
+
+                            </form>
+
+
+                            <div class="col-md-12 padd_l_0 padd_r_0">
+                                <hr>
+                            </div>
+
+
+                            <div>
+                                <div class="table-container">
+                                    <div class="t-header">Existing Departments</div>
+                                    <div class="clearfix"></div>
+                                    <div class="h_17"></div>
+                                    <div class="table-responsive">
+                                        <table id="scrollVertical2" class="table custom-table">
+                                            <thead>
+                                            <tr>
+                                                <th>No#</th>
+                                                <th>Department Name</th>
+                                                <th>Action</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+
+                                            <tr th:each="pen: ${dList}">
+                                                <td><span th:text="${pen.getId()}">1</span></td>
+                                                <td><span th:text="${pen.name}">Activity</span></td>
+                                                <td>
+                                                    <div class="td-actions">
+                                                        <a href="#" type="button"
+                                                           th:onclick="'getDepId(\'' + ${pen.getId()} + '\');'"
+                                                           class="icon blue" title="" data-original-title="Delete">
+                                                            <i class="icon-cancel"></i>
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+</div>
+</div>
+<script>
+    $('document').ready(function () {
+        var serverResponse = $('#serverResponse');
+        $("#frm").submit(function (event) {
+
+            event.preventDefault();
+            var post_url = $(this).attr("action");
+            var form_data = $(this).serialize();
+            console.log(form_data);
+
+            $.post(post_url, form_data, function (data) {
+                console.log(data);
+
+                if (data === "Success") {
+                    $("#frm").trigger("reset");
+                    loadContent("/departmentSetting").delay(2000);
+
+                } else {
+                    serverResponse.html("Error!!");
+                    serverResponse.show();
+                }
+
+                serverResponse.show();
+            })
+        })
+    })
+
+    function getDepId(id) {
+        loadContent("/deleteDepartment?id=" + id);
+
+    }
+</script>
+<div th:replace="fragments/footer :: component"></div>
+</body>
+</html>

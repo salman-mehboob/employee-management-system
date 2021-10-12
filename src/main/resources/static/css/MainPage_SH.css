@@ -1,0 +1,235 @@
+html 
+{
+/*scrollbar-face-color:#3B9320;
+scrollbar-arrow-color:#FFFFFF;
+scrollbar-track-color:#DEE8CA;
+
+scrollbar-shadow-color: #99FF33;
+scrollbar-darkshadow-color: #99FF66;
+scrollbar-highlight-color: #00FF00;
+scrollbar-3dlight-color: #009999;*/
+}
+
+
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;	
+}
+
+
+
+
+.textbox {  
+border: 1px #336699 solid; 
+font-family: Verdana, Arial, Helvetica, sans-serif; 
+font-size: 10px; 
+color: #336699;
+}
+
+
+
+.menu_button {  
+;
+}
+
+.link1 {
+color:white;
+text-decoration: none;
+}
+
+.link1 a.hover {
+color:orange;
+text-decoration: underline;
+}
+
+.image {
+	background-image:url(../images/left_button_inactive.gif);
+	width:183;
+	height:21;
+	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FFFFFF;
+	text-decoration: none;
+	font-weight:bold;
+	vertical-align:middle;
+	padding-top:4;
+
+}
+.loginuser 
+{
+	width:183;
+	height:21;
+	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #006699;/* #FFFFFF;*/
+	text-decoration: none;
+	font-weight:bold;
+	vertical-align:middle;
+	padding-top:4;
+}
+.image:hover {
+	background-image:url(../images/left_button_active.gif);
+	width:183;
+	color: #666666;
+
+}
+
+
+.image3 {
+	background-image:url(../images1/888.gif);
+	color: #666666;
+	
+	height:25;
+	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	text-decoration: none;
+	font-weight:bold;
+	vertical-align:middle;
+	padding-top:6;
+	text-align:center;
+}
+
+.image2 {
+	background-image:url(../images/777.gif);
+
+	height:25;
+	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FFFFFF;
+	text-decoration: none;
+	font-weight:bold;
+	vertical-align:middle;
+	padding-top:6;
+	text-align:center;
+}
+.image2:hover {
+	background-image:url(../images/888.gif);
+	color: #666666;
+
+}
+
+.yesno {
+	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+}
+
+.login {
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+.row_bg {
+	background-color: #F4F8FB;
+}
+
+.form_title {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #336699;
+	font-weight: bold;
+	font-size: 11px;
+}
+.form_heading {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#FFFFFF;
+	font-weight: bold;
+	font-size:11px;
+	vertical-align:middle;
+	padding-top:6;
+	text-align:left;
+
+	/*background-color: #91abc0;*/
+	/*background-color: #9CBA62;*/ /*previous*/
+	background-color:#336699;
+	/*background-color: #BDD197;*//*light*/
+}
+
+.form_heading_2 {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#FFFFFF;
+	font-weight: bold;
+	font-size:12px;
+	background-color: #6699cc;
+}
+
+.form_heading_3a {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#FFFFFF;
+	font-weight: bold;
+	font-size:12px;
+	background-color: #98AFC7;
+}
+
+
+.style1 {font-size: 14px;
+	font-weight: bold;
+	color: #559CBD;
+}
+
+.main {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#666666;
+	font-size:12px;
+}
+
+.text_font{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#666666;
+	font-size:10px;
+}
+
+/***********************************************************************************/
+/************************* New styles for Personalization **************************/
+/***********************************************************************************/
+/*Background color Image*/
+.img__top_bg {
+	background-image:url(../images/top_bg.gif);
+}
+/*Adamjee Logo Image*/
+.img__adamjeelogo {
+	background-image:url(../Images/adamjeelogo.gif);
+	background-repeat:no-repeat;
+	background-position:center; 
+}
+/*ILas Logo Image*/
+.img__ilasbanc {
+	background-image:url(../images/ilasbanc.jpg);
+	background-repeat:no-repeat;
+	background-position:top;
+}
+/*Top Horizontal Menu Image*/
+.img__777 {
+	background-image:url(../images/777.gif);
+	background-repeat:no-repeat;
+}
+/*Left Vertical Menu(Normal) Image*/
+.img__left_navigation_top_design{
+	background-image:url(../images/left_navigation_top_design.gif);
+	background-repeat:no-repeat;
+}
+.img__left_navigation_bot_design{
+	background-image:url(../images/left_navigation_bot_design.gif);
+	background-repeat:no-repeat;
+}
+/*Left Vertical Menu(Admin) Image*/
+
+/************************** Medical Detail **********************/
+.ItemStyle
+{
+	/*font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#FFFFFF;
+	font-weight: bold;
+	font-size:12px;*/
+	background-color:#F4F8FB;
+}
+.ItemStyleAlt
+{
+	/*font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#FFFFFF;
+	font-weight: bold;
+	font-size:12px;*/
+	background-color:white;
+}

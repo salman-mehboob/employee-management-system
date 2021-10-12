@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head></head>
+<body topmargin="0" leftmargin="0">
+
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" id="formcontent">
+
+    <div class="main-container">
+
+        <!-- Page header start -->
+
+        <!-- Page header end -->
+
+        <div class="content-wrapperr">
+
+            <div class="row">
+
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">Dependants</div>
+                        </div>
+                        <div class="alert alert-warning alert-dismissible fade show" id="serverResponse"
+                             style="display: none" align="center" role="alert"><span
+                                class="image model_alert_ico"><i class="icon-alert-triangle"></i></span>
+                        </div>
+
+                        <div class="card-body">
+
+                            <form action="#" th:object="${userList}" th:action="@{/dependants/addDependent}" name="frm"
+                                  id="lockerForm" method="post">
+                                <input type="hidden" name="id">
+                                <div class="form-body">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label class="control-label">Employee Name</label>
+                                                <input hidden name="employee" readonly
+                                                       class="form-control readonly_input"
+                                                       th:value="${userList.employee.id}">
+
+                                                <input readonly class="form-control readonly_input"
+                                                       th:value="${userList.employee.firstName + ' ' + userList.employee.lastName}">
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label class="control-label">Dependant Relation</label>
+                                                <select class="form-control locker_number" name="dependantsRelation">
+                                                    <option>Select Relation</option>
+                                                    <option
+                                                            th:each="type :${T(com.econception.employemanagement.enumeration.DependantsRelation).values()}"
+                                                            th:value="${type}"
+                                                            th:text="${type}"
+                                                    >Yes
+                                                    </option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label class="control-label">Dependant First Name</label>
+                                                <input class="form-control" type="text" placeholder="First Name"
+                                                       title="Enter only alphabets!!!"    onkeypress="return /[a-z]/i.test(event.key)" name="firstName" size="30" maxlength="30" required="">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label class="control-label">Dependant Last Name</label>
+                                                <input class="form-control" type="text" placeholder="Last Name"
+                                                       title="Enter only alphabets!!!"       onkeypress="return /[a-z]/i.test(event.key)" name="lastName" size="30" maxlength="30" required="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label class="control-label">Dependant Date of Birth</label>
+                                                <input type="text" id="dob"
+                                                        class="form-control"
+                                                       placeholder="Last Name" name="DOB" size="30" maxlength="30"
+                                                       required="">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <button type="submit" id="submit" name="submit"
+                                                    class="btn btn-outline-primary btn-rounded float-right btn_set_ico">
+                                                Save <span class="icon-lock_outline"></span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $('document').ready(function () {
+        var serverResponse = $('#serverResponse');
+        $("#lockerForm").submit(function (event) {
+
+            event.preventDefault();
+            var post_url = $(this).attr("action");
+            var form_data = $(this).serialize();
+            console.log(form_data);
+
+            $.post(post_url, form_data, function (data) {
+                console.log(data);
+
+                if (data === "Success") {
+                    serverResponse.html("Dependant added successfully");
+                    serverResponse.show();
+                    $("#lockerForm").trigger("reset");
+
+                } else {
+                    serverResponse.html("Dependant Registration Error!!");
+                    serverResponse.show();
+                }
+
+                serverResponse.show();
+            })
+        })
+    })
+    $('#dob').daterangepicker({
+        alwaysShowCalendars: true,
+        showCustomRangeLabel: true,
+        minDate: '1940-01-01',
+        singleDatePicker: true,
+        showDropdowns: true,
+        autoUpdateInput: true,
+        locale: {
+            cancelLabel: 'Clear',
+            format: 'YYYY-DD-MM'
+        },
+    });
+</script>
+</body>
+</html>

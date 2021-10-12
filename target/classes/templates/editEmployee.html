@@ -1,0 +1,345 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <style>
+        img#thumbnail {
+            width: 150px;
+            height: 150px;
+            border-radius: 75px;
+        }
+
+
+    </style>
+</head>
+<body topmargin="0" leftmargin="0">
+
+
+<!--    <h4 class="t-header">Call Work</h4>-->
+
+<div class="alert alert-warning alert-dismissible fade show" id="serverResponse" style="display: none" align="center"
+     role="alert"><span
+        class="image model_alert_ico"><i class="icon-alert-triangle"></i></span>
+</div>
+
+<form id="employeeForm" autocomplete="on" action="#" th:action="@{/employee/save}"
+      th:object="${employee}" method="post" enctype="multipart/form-data" class="form-horizontal"
+      role="form">
+    <div class="row">
+    <div class="col-md-8">
+        <div class="form-group">
+        <label class="col-form-label">Profile Picture</label>
+        </div>
+            <div class="form-group">
+                <span class="avatar">
+                <img id="thumbnail" alt="" th:src="@{${employee.getImagePath()}}" height="250" width="250"> </span>
+                <span th:if="${employee.photo == null }"><input  type="file" name="file" id="imageUpload" accept="image/png, image/jpeg"></span>
+                <span th:if="${employee.photo != null}"><input hidden type="file" name="file" id="imageUpload" accept="image/png, image/jpeg"></span>
+            </div>
+    </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <button type="button" id="submitt" name="removeButton" onclick="myFunction()"
+                        class="btn btn-outline-primary btn-rounded push btn_set_ico">Remove Picture<span
+                        class="icon-delete"></span></button>
+            </div>
+        </div>
+        <div hidden class="col-md-6">
+            <div class="form-group">
+                <label class="col-form-label">Employee ID</label>
+                <input readonly th:field="*{id}" class="form-control readonly_input" th:value="${employee.id}">
+                <input hidden type="text" th:value="${employee.photo}" name="photo">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label">First Name</label>
+                <input class="form-control amb" type="text" th:value="${employee.firstName}" placeholder="First Name"
+                       title="Enter only alphabets!!!" onkeypress="return /[a-z]/i.test(event.key)" name="firstName" size="30" maxlength="30" required>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label">Middle Name</label>
+                <input class="form-control" type="text" th:value="${employee.middleName}" placeholder="Middle Name"
+                       title="Enter only alphabets!!!" onkeypress="return /[a-z]/i.test(event.key)" name="middleName" size="30" maxlength="30" required>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label">Last Name</label>
+                <input class="form-control amb" type="text" placeholder="Last Name" th:value="${employee.lastName}"
+                       title="Enter only alphabets!!!" onkeypress="return /[a-z]/i.test(event.key)"  name="lastName" size="30" maxlength="30" required>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label">Gender</label>
+                <select class="form-control  amb" name="gender" required>
+                    <option selected th:value="${employee.gender}" th:text="${employee.gender}">Option</option>
+                    <option> Male</option>
+                    <option> Female</option>
+                    <option> Other</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label">Date of Birth</label>
+                <input th:value="${employee.DOB}" type="date" id="DOB" required
+                       min="1985-01-01" max="2000-01-01" class="form-control  amb" placeholder="Last Name" name="DOB"
+                       size="30" maxlength="30">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label">Department</label>
+                <select class="form-control amb" name="department" required>
+                    <option selected th:value="${employee.department.id}" th:text="${employee.department.name}">Option
+                    </option>
+                    <option th:each="department : ${dep}" th:value="${department.id}" th:text="${department.getName()}"
+                    > category
+                    </option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label">Primary Contact Number</label>
+                <input th:value="${employee.primaryContactNumber}" class="form-control amb" type="tel"
+                       title="Enter only numbers!!!" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" placeholder="03xxxxxxxxx" required name="primaryContactNumber" size="12" maxlength="12">
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label">Designation</label>
+                <input th:value="${employee.designation}" class="form-control amb" type="text"
+                       title="Enter only alphabets!!!" onkeypress="return /[a-z]/i.test(event.key)" placeholder="Designation" required name="designation" size="50" maxlength="50">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label">Status</label>
+                <select class="form-control amb" name="status" required>
+                    <option th:text="${employee.status}"
+                    th:value="${employee.status}" selected>Select Status</option>
+                    <option th:each="type : ${T(com.econception.employemanagement.enumeration.Status).values()}"
+                            th:value="${type}"
+                            th:text="${type}">Type
+                    </option>
+
+                </select>
+            </div>
+        </div>
+            <input hidden name="dataCreated" th:value="${employee.dataCreated}">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label">Secondary Contact Number</label>
+                <input th:value="${employee.secondryContactNumber}" class="form-control" type="tel"
+                       title="Enter only numbers!!!" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"  placeholder="03xx-xxxxxxx" required name="secondryContactNumber" size="12" maxlength="12">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label">CNIC</label>
+                <input class="form-control amb" th:value="${employee.cnic}" type="tel" placeholder="37xxx-xxxxxxx-x"
+                       title="Enter only numbers!!!" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" name="cnic" size="15" maxlength="15" required>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label">Address</label>
+                <input class="form-control amb" type="text" th:value="${employee.address}" placeholder="Address"
+                       name="address" size="60" maxlength="100" required>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label">Line 2</label>
+                <input class="form-control" type="text" placeholder="Address" th:value="${employee.line2}" name="line2"
+                       size="60" maxlength="100">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label">City</label>
+                <input class="form-control amb" type="text" placeholder="City" th:value="${employee.city}" name="city"
+                       title="Enter only alphabets!!!" required onkeypress="return /[a-z]/i.test(event.key)" size="60" maxlength="100">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label">Skype</label>
+                <input class="form-control amb" type="text" placeholder="skype" required th:value="${employee.skype}" name="skype"
+                       size="60" maxlength="100">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label">Linkedin</label>
+                <input class="form-control amb" type="text" placeholder="linkedin" required th:value="${employee.linkedin}"
+                       name="linkedin" size="60" maxlength="100">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label">Personal Email</label>
+                <input class="form-control amb" type="email" placeholder="abc@xyz.com" required th:value="${employee.personalEmail}"
+                       name="personalEmail" size="60" maxlength="100">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label">Work Email</label>
+                <input class="form-control amb" type="email" placeholder="abc@xyz.com" required th:value="${employee.workEmail}"
+                       name="workEmail" size="60" maxlength="100">
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <button type="submit" id="submit" name="submit"
+                class="btn btn-outline-primary btn-rounded float-right btn_set_ico">Save <span
+                class="icon-lock_outline"></span></button>
+    </div>
+
+            <input type="hidden" name="employeeId" th:value="${employeeId}">
+    <button hidden id="autoC" class="btn btn-outline-primary"
+            th:data-id="${employeeId}"
+            onclick="edit(this.getAttribute('data-id'))"
+            type="button">
+        Edit Profile</span>
+    </button>
+    <button hidden id="autoC1" class="btn btn-outline-primary"
+            th:data-id="${employeeId}"
+            onclick=" hideModal()"
+            type="button">
+        Edit Profile</span>
+    </button>
+
+</form>
+
+<script>
+    $('document').ready(function () {
+
+
+        var serverResponse = $('#serverResponse');
+        $("#submit").click(function (event) {
+
+            event.preventDefault();
+            var form = $('#employeeForm')[0];
+
+            var data = new FormData(form);
+
+
+            data.append("CustomField", "This is some extra data, testing");
+
+            $.ajax({
+
+                type: "POST",
+                enctype: 'multipart/form-data',
+                url: "/ems/employee/save",
+                data: data,
+                processData: false,
+                contentType: false,
+                cache: false,
+                timeout: 600000,
+                success: function (data) {
+                    if (data === "Success") {
+                        serverResponse.html("Record Updated Successfully");
+                        serverResponse.show();
+                        setTimeout(function (){$("#autoC1").trigger('click');}, 300);
+                        // setTimeout(function (){$("#autoC1").trigger('click');}, 300);
+                        // $("#refreshP").load();
+                        setTimeout(function (){loadContent("/employee/editProfile")}, 400);
+                    } else {
+                        alert('Error');
+                    }
+
+
+                }
+
+            });
+
+        });
+        $('#imageUpload').change(function () {
+            showImageThumbnail(this);
+        });
+
+
+    })
+
+    function showImageThumbnail(fileInput) {
+        file = fileInput.files[0];
+        reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#thumbnail').attr('src', e.target.result);
+        };
+        reader.readAsDataURL(file);
+    }
+
+
+    function myFunction() {
+
+        var serverResponse = $('#serverResponse');
+        var form = $('#employeeForm')[0];
+        var data = new FormData(form);
+        $.ajax({
+            type: "POST",
+            // enctype: 'multipart/form-data',
+            url: "/ems/employee/delete",
+            data: data,
+            processData: false,
+            contentType: false,
+            cache: false,
+            timeout: 600000,
+            success: function (data) {
+                if (data === "Success") {
+                    // alert('Deleted SuccessFully')
+                    serverResponse.html("Profile Picture Deleted Successfully");
+                    serverResponse.show();
+                    setTimeout(function (){$('#autoC1').trigger('click');}, 300);
+                    location.reload();
+                    setTimeout(function (){loadContent("/employee/editProfile")}, 400);
+                   // setTimeout(function (){$('#autoC').trigger('click');}, 500);
+                } else if (data === "Error") {
+
+                    serverResponse.html("No Profile Picture to Delete");
+                    serverResponse.show();
+                    setTimeout(function (){$('#autoC').trigger('click');}, 500);
+                }else if (data === "Empty") {
+                    serverResponse.html("Fill all fields!!");
+                    serverResponse.show();
+                }else {
+                    alert("Error");
+                }
+
+
+            }
+
+        })
+    }
+    $('input.amb').on('input',function(e){
+        let input = $('input.amb').val();
+        var serverResponse = $('#serverResponse');
+        if(input.toString() === " "){
+
+            serverResponse.html("Don't leave fields empty!!");
+            document.getElementById("submit").style.display = "none";
+            serverResponse.show();
+
+        }
+        else{
+            document.getElementById("submit").style.display = "block";
+            serverResponse.hide();
+        }
+
+    })
+
+</script>
+</div>
+</body>
+</html>
+
+
+

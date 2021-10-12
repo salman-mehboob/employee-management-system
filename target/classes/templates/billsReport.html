@@ -1,0 +1,422 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: head">
+    <style>
+        .card {
+            width: 900px !important;
+        }
+
+        .card-body {
+            width: 900px !important;
+        }
+    </style>
+</head>
+<body topmargin="0" leftmargin="0">
+
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" id="formcontent">
+
+    <div class="main-container">
+
+
+        <!-- Content wrapper start -->
+
+
+        <div class="content-wrapper">
+            <!-- Row starts -->
+            <div class="card-header">
+                <div class="card-title"><h5>Bills</h5></div>
+            </div>
+            <div class="row gutters">
+                <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <!-- Row start -->
+                    <div class="row gutters">
+                        <div class="col-xl-6 col-lg-4 col-md-4 col-sm-4 col-12">
+                            <div class="info-tiles">
+                                <div class="info-icon">
+                                    <i class="icon-account_circle"></i>
+                                </div>
+                                <div class="stats-detail">
+                                    <h3 th:text="${TB}">185k</h3>
+                                    <p>Total Bill Claims</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-4 col-md-4 col-sm-4 col-12">
+                            <div class="info-tiles">
+                                <div class="info-icon">
+                                    <i class="icon-watch_later"></i>
+                                </div>
+                                <div class="stats-detail">
+                                    <h3 th:text="${TPB}">450</h3>
+                                    <p>Processed Claims</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-4 col-md-4 col-sm-4 col-12">
+                            <div class="info-tiles">
+                                <div class="info-icon">
+                                    <i class="icon-visibility"></i>
+                                </div>
+                                <div class="stats-detail">
+                                    <h3 th:text="${PB}">7500</h3>
+                                    <p>Pending Claims</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-4 col-md-4 col-sm-4 col-12">
+                            <div class="info-tiles">
+                                <div class="info-icon">
+                                    <i class="icon-check-circle"></i>
+                                </div>
+                                <div class="stats-detail">
+                                    <h3 th:text="${AB}">$300k</h3>
+                                    <p>Approved Claims</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-4 col-md-4 col-sm-4 col-12">
+                            <div class="info-tiles">
+                                <div class="info-icon secondary">
+                                    <i class="icon-check_circle"></i>
+                                </div>
+                                <div class="stats-detail">
+                                    <h3 th:text="${RB}">250</h3>
+                                    <p>Rejected Claims</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Row ends -->
+
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="card cardG">
+                        <div class="card-header">
+                            <div class="card-title">Bill Claims</div>
+                        </div>
+                        <div class="card-body">
+                            <div id="billChart" class="chart-height"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="col-md-12 padd_l_0 padd_r_0">
+                <hr>
+            </div>
+
+
+            <!-- Row starts -->
+            <div class="card-header">
+                <div class="card-title"><h5>Leaves</h5></div>
+            </div>
+            <div class="row gutters">
+
+                <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <!-- Row start -->
+                    <div class="row gutters">
+                        <div class="col-xl-6 col-lg-4 col-md-4 col-sm-4 col-12">
+                            <div class="info-tiles">
+                                <div class="info-icon">
+                                    <i class="icon-account_circle"></i>
+                                </div>
+                                <div class="stats-detail">
+                                    <h3 th:text="${TL}">185k</h3>
+                                    <p>Total Leaves Requests</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-4 col-md-4 col-sm-4 col-12">
+                            <div class="info-tiles">
+                                <div class="info-icon">
+                                    <i class="icon-watch_later"></i>
+                                </div>
+                                <div class="stats-detail">
+                                    <h3 th:text="${TPL}">450</h3>
+                                    <p>Processed Leaves Request</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-4 col-md-4 col-sm-4 col-12">
+                            <div class="info-tiles">
+                                <div class="info-icon">
+                                    <i class="icon-visibility"></i>
+                                </div>
+                                <div class="stats-detail">
+                                    <h3 th:text="${PL}">7500</h3>
+                                    <p>Pending Leaves Request</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-4 col-md-4 col-sm-4 col-12">
+                            <div class="info-tiles">
+                                <div class="info-icon">
+                                    <i class="icon-check-circle"></i>
+                                </div>
+                                <div class="stats-detail">
+                                    <h3 th:text="${AL}">$300k</h3>
+                                    <p>Approved Leaves</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-4 col-md-4 col-sm-4 col-12">
+                            <div class="info-tiles">
+                                <div class="info-icon secondary">
+                                    <i class="icon-check_circle"></i>
+                                </div>
+                                <div class="stats-detail">
+                                    <h3 th:text="${RL}">250</h3>
+                                    <p>Rejected Leaves</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Row ends -->
+
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                    <div class="card cardG">
+                        <div class="card-header">
+                            <div class="card-title">Leaves</div>
+                        </div>
+                        <div class="card-body">
+                            <div id="leavesChart" class="chart-height"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="col-md-12 padd_l_0 padd_r_0">
+                <hr>
+            </div>
+
+
+            <!-- Row starts -->
+            <div class="card-header">
+                <div class="card-title"><h5>Tasks</h5></div>
+            </div>
+            <div class="row gutters">
+
+                <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <!-- Row start -->
+                    <div class="row gutters">
+                        <div class="col-xl-6 col-lg-4 col-md-4 col-sm-4 col-12">
+                            <div class="info-tiles">
+                                <div class="info-icon">
+                                    <i class="icon-account_circle"></i>
+                                </div>
+                                <div class="stats-detail">
+                                    <h3 th:text="${TT}">185k</h3>
+                                    <p>Assigned Tasks</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-4 col-md-4 col-sm-4 col-12">
+                            <div class="info-tiles">
+                                <div class="info-icon">
+                                    <i class="icon-visibility"></i>
+                                </div>
+                                <div class="stats-detail">
+                                    <h3 th:text="${CT}">7500</h3>
+                                    <p>Completed Tasks</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-4 col-md-4 col-sm-4 col-12">
+                            <div class="info-tiles">
+                                <div class="info-icon secondary">
+                                    <i class="icon-check_circle"></i>
+                                </div>
+                                <div class="stats-detail">
+                                    <h3 th:text="${PT}">250</h3>
+                                    <p>Pending Tasks</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Row ends -->
+
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-6">
+                    <div class="card cardG">
+                        <div class="card-header">
+                            <div class="card-title">Assigned Tasks</div>
+                        </div>
+                        <div class="card-body">
+                            <div id="tasksAss"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <script type="text/javascript">
+            $('document').ready(function () {
+
+                let taskLabels = [(${taskLabels})];
+                let taskData = [(${taskData})];
+
+
+                var options = {
+                    chart: {
+                        height: 280,
+                        type: 'line',
+                        zoom: {
+                            enabled: false
+                        },
+                        toolbar: {
+                            show: false,
+                        },
+                    },
+                    series: taskData,
+                    stroke: {
+                        width: [0, 4, 4]
+                    },
+                    labels: taskLabels,
+                    xaxis: {
+                        type: 'categories'
+                    },
+                    colors: ['#1a8e5f', '#c1920c', '#cc2626'],
+                };
+                var chart = new ApexCharts(
+                    document.querySelector("#tasksAss"),
+                    options
+                );
+                chart.render();
+
+                let billLabels = [(${billLabels})];
+                let billData = [(${billData})];
+
+
+                var options1 = {
+                    series: billData,
+                    chart: {
+                        height: 350,
+                        type: 'line',
+                    },
+                    stroke: {
+                        curve: 'smooth'
+                    },
+                    fill: {
+                        type: 'solid',
+                        opacity: [0.35, 1],
+                    },
+                    labels: billLabels,
+                    markers: {
+                        size: 0
+                    },
+                    yaxis: [
+                        {
+                            title: {
+                                text: 'Number of Claims',
+                            },
+                        },
+
+                    ],
+                    tooltip: {
+                        shared: true,
+                        intersect: false,
+                        y: {
+                            formatter: function (y) {
+                                if (typeof y !== "undefined") {
+                                    return y.toFixed(0) + " points";
+                                }
+                                return y;
+                            }
+                        }
+                    }
+                };
+
+                var chart1 = new ApexCharts(document.querySelector("#billChart"), options1);
+                chart1.render();
+
+
+                let leavesLabels = [(${lLabels})];
+                let leavesData = [(${lData})];
+
+
+                var options2 = {
+                    series: leavesData,
+                    chart: {
+                        height: 350,
+                        type: 'line',
+                    },
+                    stroke: {
+                        curve: 'smooth'
+                    },
+                    fill: {
+                        type: 'solid',
+                        opacity: [0.35, 1],
+                    },
+                    labels: leavesLabels,
+                    markers: {
+                        size: 0
+                    },
+                    yaxis: [
+                        {
+                            title: {
+                                text: 'Number of Leaves',
+                            },
+                        },
+
+                    ],
+                    tooltip: {
+                        shared: true,
+                        intersect: false,
+                        y: {
+                            formatter: function (y) {
+                                if (typeof y !== "undefined") {
+                                    return y.toFixed(0) + " points";
+                                }
+                                return y;
+                            }
+                        }
+                    }
+                };
+
+                var chart2 = new ApexCharts(document.querySelector("#leavesChart"), options2);
+                chart2.render();
+
+
+                var serverResponse = $('#serverResponse');
+                $("#frm").submit(function (event) {
+
+                    event.preventDefault();
+                    var post_url = $(this).attr("action");
+                    var form_data = $(this).serialize();
+                    console.log(form_data);
+
+                    $.post(post_url, form_data, function (data) {
+                        console.log(data);
+
+                        if (data === "Success") {
+                            $("#frm").trigger("reset");
+                            loadContent("/moduleSetting").delay(2000);
+
+                        } else {
+                            serverResponse.html("Error!!");
+                            serverResponse.show();
+                        }
+
+                        serverResponse.show();
+                    })
+                })
+            })
+
+            function getDepId(id) {
+                loadContent("/deleteModule?id=" + id);
+
+            }
+        </script>
+        <div th:replace="fragments/footer :: component"></div>
+</body>
+</html>
+
+
+
+

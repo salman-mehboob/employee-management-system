@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+
+
+<body>
+<div class="containerr">
+    <div class="wrapper ">
+
+
+        <!-- Page Content  -->
+        <div id="content">
+
+
+            <div class="employees" align="center">
+                <div id="task" class="table-container">
+                    <div class="t-header">Employees Record</div>
+                    <div class="table-responsive">
+                        <table id="basicExample" class="table custom-table">
+                            <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">First Name</th>
+                                <th scope="col">Last Name</th>
+                                <th scope="col">Department</th>
+                                <th scope="col">work Email</th>
+                                <th scope="col">Contact Number</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Actions</th>
+
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr th:each="em : ${userList}" th:if="${em.getActive() == false }"  style="background-color: #ff8686">
+                                <td  th:text="${em.employee.id}">First Name</td>
+                                <td th:text="${em.employee.firstName}">First Name</td>
+                                <td th:text="${em.employee.lastName}">Last Name</td>
+                                <td th:text="${em.employee.department.getName()}">Department</td>
+                                <td th:text="${em.employee.workEmail}">Work Email</td>
+                                <td th:text="${em.employee.primaryContactNumber}">Contact Number</td>
+                                <td>Inactive</td>
+                                <td class="action__bar">
+
+                                    <button class="btn btn-outline-primary btn-rounded"
+                                            th:data-id="${em.id}"
+                                            onclick="showEmployeeDetail(this.getAttribute('data-id'))"
+                                            type="button">
+                                        Show More</span>
+                                    </button>
+                                    <button class="btn btn-outline-primary btn-rounded"
+                                            th:data-id="${em.id}"
+                                            onclick="userSetting(this.getAttribute('data-id'))"
+                                            type="button">
+                                       Settings</span>
+                                    </button>
+                                    &nbsp;&nbsp;&nbsp;
+
+                                </td>
+
+                            </tr>
+                            <tr th:each="em : ${userList}" th:if="${em.getActive() == true }" >
+                                <td  th:text="${em.employee.id}">First Name</td>
+                                <td th:text="${em.employee.firstName}">First Name</td>
+                                <td th:text="${em.employee.lastName}">Last Name</td>
+                                <td th:text="${em.employee.department.getName()}">Department</td>
+                                <td th:text="${em.employee.workEmail}">Work Email</td>
+                                <td th:text="${em.employee.primaryContactNumber}">Contact Number</td>
+                                <td>Active</td>
+                                <td class="action__bar">
+
+                                    <button class="btn btn-outline-primary btn-rounded"
+                                            th:data-id="${em.id}"
+                                            onclick="showEmployeeDetail(this.getAttribute('data-id'))"
+                                            type="button">
+                                        Show More</span>
+                                    </button>
+                                    <button class="btn btn-outline-primary btn-rounded"
+                                            th:data-id="${em.id}"
+                                            onclick="userSetting(this.getAttribute('data-id'))"
+                                            type="button">
+                                        Settings</span>
+                                    </button>
+                                    &nbsp;&nbsp;&nbsp;
+
+                                </td>
+
+                            </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div th:replace="fragments/modal"></div>
+</div>
+<div th:replace="fragments/footer :: component"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
