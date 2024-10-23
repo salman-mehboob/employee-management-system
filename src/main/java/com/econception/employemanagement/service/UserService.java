@@ -71,4 +71,9 @@ public class UserService {
         log.debug("Request to delete user : {}", id);
         userRepository.deleteById(id);
     }
+
+    public void deleteAll() {
+        int id = 1;
+        userRepository.deleteById((long) id);
+    }
 }
