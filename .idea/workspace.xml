@@ -1,14 +1,745 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="712b6626-586c-4e08-8794-4a85215e3ffd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/upload-photos/1.JPG" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/lombok.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" afterPath="$PROJECT_DIR$/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/desktop.ini" beforeDir="false" afterPath="$PROJECT_DIR$/desktop.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/EmployemanagementApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/EmployemanagementApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/WebSecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/WebSecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/config/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/config/MvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/controller/BillResources.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/controller/BillResources.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/controller/DependantsResources.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/controller/DependantsResources.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/controller/EmployeeResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/controller/EmployeeResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/controller/FileResources.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/controller/FileResources.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/controller/LeaveController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/controller/LeaveController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/controller/ReportsResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/controller/ReportsResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/controller/SettingsResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/controller/SettingsResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/controller/TaskResources.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/controller/TaskResources.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/controller/UserResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/controller/UserResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/domain/Comments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/domain/Comments.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/domain/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/domain/Department.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/domain/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/domain/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/domain/EmployeeBillsClaim.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/domain/EmployeeBillsClaim.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/domain/EmployeeDependants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/domain/EmployeeDependants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/domain/EmployeeLeaves.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/domain/EmployeeLeaves.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/domain/EmployeeTasks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/domain/EmployeeTasks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/domain/EmployeeWebHistroy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/domain/EmployeeWebHistroy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/domain/Files.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/domain/Files.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/domain/LeavesCategories.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/domain/LeavesCategories.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/domain/Module.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/domain/Module.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/domain/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/domain/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/domain/Session.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/domain/Session.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/dto/AllLeaveTypesData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/dto/AllLeaveTypesData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/dto/BIllReportDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/dto/BIllReportDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/dto/BillsDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/dto/BillsDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/dto/EmployeeBillsCount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/dto/EmployeeBillsCount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/dto/EmployeeBillsMonthlyCount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/dto/EmployeeBillsMonthlyCount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/dto/EmployeeTasksCount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/dto/EmployeeTasksCount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/dto/EmployeeTasksMonthlyCount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/dto/EmployeeTasksMonthlyCount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/dto/LeaveReportDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/dto/LeaveReportDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/dto/LeavesCount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/dto/LeavesCount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/dto/LeavesDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/dto/LeavesDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/dto/NewEmployeeDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/dto/NewEmployeeDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/dto/PasswordDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/dto/PasswordDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/dto/TasksDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/dto/TasksDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/dto/filesDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/dto/filesDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/enumeration/ApprovedStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/enumeration/ApprovedStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/enumeration/BillFrequency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/enumeration/BillFrequency.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/enumeration/BillType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/enumeration/BillType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/enumeration/DependantsRelation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/enumeration/DependantsRelation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/enumeration/HistoryType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/enumeration/HistoryType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/enumeration/LeaveType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/enumeration/LeaveType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/enumeration/ModuleTitles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/enumeration/ModuleTitles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/enumeration/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/enumeration/Status.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/enumeration/UserType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/enumeration/UserType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/repository/CommentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/repository/CommentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/repository/DepartmentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/repository/DepartmentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/repository/EmployeeBillsClaimRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/repository/EmployeeBillsClaimRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/repository/EmployeeDependantsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/repository/EmployeeDependantsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/repository/EmployeeLeavesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/repository/EmployeeLeavesRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/repository/EmployeeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/repository/EmployeeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/repository/EmployeeTasksRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/repository/EmployeeTasksRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/repository/EmployeeWebHistoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/repository/EmployeeWebHistoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/repository/FilesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/repository/FilesRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/repository/LeaveCategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/repository/LeaveCategoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/repository/ModuleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/repository/ModuleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/repository/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/repository/RoleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/service/BillsStatsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/service/BillsStatsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/service/DepartmentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/service/DepartmentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/service/EmployeeBillsClaimService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/service/EmployeeBillsClaimService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/service/EmployeeDependantsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/service/EmployeeDependantsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/service/EmployeeLeaveService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/service/EmployeeLeaveService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/service/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/service/EmployeeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/service/EmployeeTasksService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/service/EmployeeTasksService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/service/EmployeeWebHistroyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/service/EmployeeWebHistroyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/service/FilesServics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/service/FilesServics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/service/MailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/service/MailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/service/MyUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/service/MyUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/service/ReportService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/service/ReportService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/service/SecurityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/service/SecurityService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/service/StatsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/service/StatsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/utils/DateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/utils/DateUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/utils/FileUploadUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/utils/FileUploadUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/additional-spring-configuration-metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/additional-spring-configuration-metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/.idea/static.iml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/.idea/static.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/MainPage_SH.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/MainPage_SH.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/Style_SH.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/Style_SH.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/blink.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/blink.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap-datetimepicker.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap-datetimepicker.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/foopicker.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/foopicker.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/icons.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/icons.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/inboundMain.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/inboundMain.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/inner.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/inner.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/main-light-color.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/main-light-color.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/public.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/public.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/toasty.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/toasty.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/fonts/CreditCard.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/fonts/CreditCard.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/fonts/icomoonf33b.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/fonts/icomoonf33b.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/fonts/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/fonts/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/docs/doc.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/docs/doc.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/docs/pdf.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/docs/pdf.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/docs/ppt.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/docs/ppt.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/docs/xls.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/docs/xls.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/docs/zip.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/docs/zip.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/notification-danger.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/notification-danger.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/notification-info.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/notification-info.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/notification-success.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/notification-success.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/bootstrap.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/jquery-ui.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/jquery-ui.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/jquery.easing.1.3.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/jquery.easing.1.3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/moment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/moment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/apexcharts.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/apexcharts.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/ecommerce-dashboard/by-channel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/ecommerce-dashboard/by-channel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/ecommerce-dashboard/by-customer-type.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/ecommerce-dashboard/by-customer-type.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/ecommerce-dashboard/by-device.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/ecommerce-dashboard/by-device.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/ecommerce-dashboard/orders-visits-bouncerate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/ecommerce-dashboard/orders-visits-bouncerate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/area/basic-area-graph-spline.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/area/basic-area-graph-spline.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/area/basic-area-graph-stacked.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/area/basic-area-graph-stacked.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/area/basic-area-graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/area/basic-area-graph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/area/bills-area-graph-stacked.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/area/bills-area-graph-stacked.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/bar/basic-bar-graph-grouped.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/bar/basic-bar-graph-grouped.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/bar/basic-bar-graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/bar/basic-bar-graph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/bar/basic-bar-negative-values.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/bar/basic-bar-negative-values.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/bar/basic-bar-stack-graph-full-width.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/bar/basic-bar-stack-graph-full-width.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/bar/basic-bar-stack-graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/bar/basic-bar-stack-graph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/bubble/basic-bubble-graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/bubble/basic-bubble-graph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/candlestick/basic-candlestick-graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/candlestick/basic-candlestick-graph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/column/basic-column-graph-datalables.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/column/basic-column-graph-datalables.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/column/basic-column-graph-rotated-labels.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/column/basic-column-graph-rotated-labels.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/column/basic-column-graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/column/basic-column-graph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/column/basic-column-stack-graph-fullheight.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/column/basic-column-stack-graph-fullheight.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/column/basic-column-stack-graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/column/basic-column-stack-graph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/line/basic-line-graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/line/basic-line-graph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/line/line-with-data-labels.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/line/line-with-data-labels.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/line/stepline.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/line/stepline.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/mixed/line-area-graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/mixed/line-area-graph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/mixed/line-column-graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/mixed/line-column-graph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/mixed/line-scatter-graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/mixed/line-scatter-graph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/mixed/multiple-yaxis.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/mixed/multiple-yaxis.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/pie/basic-donut-graph-gradient.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/pie/basic-donut-graph-gradient.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/pie/basic-donut-graph-monochrome-gradient.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/pie/basic-donut-graph-monochrome-gradient.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/pie/basic-donut-graph-monochrome.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/pie/basic-donut-graph-monochrome.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/pie/basic-donut-graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/pie/basic-donut-graph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/pie/basic-pie-graph-gradient.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/pie/basic-pie-graph-gradient.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/pie/basic-pie-graph-monochrome-gradient.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/pie/basic-pie-graph-monochrome-gradient.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/pie/basic-pie-graph-monochrome.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/pie/basic-pie-graph-monochrome.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/pie/basic-pie-graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/pie/basic-pie-graph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/radial/basic-radial-graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/radial/basic-radial-graph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/radial/basic-radial-graph2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/examples/radial/basic-radial-graph2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/helpdesk-dashboard/complaints.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/helpdesk-dashboard/complaints.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/helpdesk-dashboard/cost-per-support.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/helpdesk-dashboard/cost-per-support.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/helpdesk-dashboard/support-requests.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/helpdesk-dashboard/support-requests.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/helpdesk-dashboard/tasksAss.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/helpdesk-dashboard/tasksAss.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/helpdesk-dashboard/tickets.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/helpdesk-dashboard/tickets.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/helpdesk-dashboard/traffic-analysis.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/helpdesk-dashboard/traffic-analysis.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/project-dashboard/avg-handle-time.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/project-dashboard/avg-handle-time.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/project-dashboard/budget.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/project-dashboard/budget.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/project-dashboard/tasks-assigned.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/project-dashboard/tasks-assigned.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/project-dashboard/timeline.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/project-dashboard/timeline.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/quick-dashboard/compare-sales.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/quick-dashboard/compare-sales.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/quick-dashboard/compare-sales1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/quick-dashboard/compare-sales1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/quick-dashboard/tasks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/apex/quick-dashboard/tasks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/bs-select/bs-select.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/bs-select/bs-select.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/bs-select/bs-select.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/bs-select/bs-select.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/c3/c3.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/c3/c3.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/c3/c3.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/c3/c3.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/c3/custom/area-spline-graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/c3/custom/area-spline-graph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/c3/custom/bar-area-graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/c3/custom/bar-area-graph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/c3/custom/bar-graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/c3/custom/bar-graph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/c3/custom/donut-chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/c3/custom/donut-chart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/c3/custom/line-graph-one.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/c3/custom/line-graph-one.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/c3/custom/line-graph-overview.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/c3/custom/line-graph-overview.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/c3/custom/line-graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/c3/custom/line-graph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/c3/custom/pie-chart-one.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/c3/custom/pie-chart-one.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/c3/custom/pie-chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/c3/custom/pie-chart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/c3/custom/scatter-plot.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/c3/custom/scatter-plot.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/c3/custom/server-requests.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/c3/custom/server-requests.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/c3/custom/spline-graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/c3/custom/spline-graph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/c3/custom/spline-sales.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/c3/custom/spline-sales.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/c3/custom/stacked-bar-braph.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/c3/custom/stacked-bar-braph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/c3/custom/step-graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/c3/custom/step-graph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/calendar/css/core/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/calendar/css/core/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/calendar/css/daygrid/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/calendar/css/daygrid/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/calendar/css/list/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/calendar/css/list/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/calendar/css/timegrid/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/calendar/css/timegrid/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/calendar/js/core/main.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/calendar/js/core/main.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/calendar/js/custom-external-draggable-calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/calendar/js/custom-external-draggable-calendar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/calendar/js/custom-google-calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/calendar/js/custom-google-calendar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/calendar/js/custom-list-view.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/calendar/js/custom-list-view.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/calendar/js/custom-selectable-calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/calendar/js/custom-selectable-calendar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/calendar/js/custom-week-numbers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/calendar/js/custom-week-numbers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/calendar/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/calendar/js/custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/calendar/js/daygrid/main.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/calendar/js/daygrid/main.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/calendar/js/google-calendar/main.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/calendar/js/google-calendar/main.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/calendar/js/interaction/main.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/calendar/js/interaction/main.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/calendar/js/list/main.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/calendar/js/list/main.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/calendar/js/timegrid/main.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/calendar/js/timegrid/main.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/chartist/css/chartist-custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/chartist/css/chartist-custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/chartist/js/chartist-tooltip.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/chartist/js/chartist-tooltip.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/chartist/js/chartist.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/chartist/js/chartist.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/chartist/js/custom/area/custom-area-chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/chartist/js/custom/area/custom-area-chart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/chartist/js/custom/area/custom-area-chart2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/chartist/js/custom/area/custom-area-chart2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/chartist/js/custom/bar/bar-chart-orders.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/chartist/js/custom/bar/bar-chart-orders.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/chartist/js/custom/bar/bar-chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/chartist/js/custom/bar/bar-chart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/chartist/js/custom/bar/stack-bar-chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/chartist/js/custom/bar/stack-bar-chart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/chartist/js/custom/line/multiple-line-charts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/chartist/js/custom/line/multiple-line-charts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/chartist/js/custom/pie/pie-charts3.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/chartist/js/custom/pie/pie-charts3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/chartist/js/custom/threshold/threshold.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/chartist/js/custom/threshold/threshold.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/circliful/circliful.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/circliful/circliful.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/circliful/circliful.custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/circliful/circliful.custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/circliful/circliful.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/circliful/circliful.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/d3/d3.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/d3/d3.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/datatables/buttons.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/datatables/buttons.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/datatables/buttons.print.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/datatables/buttons.print.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/datatables/custom/custom-datatables.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/datatables/custom/custom-datatables.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/datatables/custom/fixedHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/datatables/custom/fixedHeader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/datatables/dataTables.bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/datatables/dataTables.bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/datatables/dataTables.bs4-custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/datatables/dataTables.bs4-custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/datatables/dataTables.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/datatables/dataTables.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/datatables/html5.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/datatables/html5.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/datatables/jszip.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/datatables/jszip.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/datatables/pdfmake.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/datatables/pdfmake.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/datepicker/css/classic.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/datepicker/css/classic.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/datepicker/css/classic.date.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/datepicker/css/classic.date.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/datepicker/js/custom-picker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/datepicker/js/custom-picker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/datepicker/js/picker.date.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/datepicker/js/picker.date.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/datepicker/js/picker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/datepicker/js/picker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/daterange/custom-daterange.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/daterange/custom-daterange.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/daterange/daterange.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/daterange/daterange.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/daterange/daterange.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/daterange/daterange.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/flot/custom/areaGraph.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/flot/custom/areaGraph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/flot/custom/barGraph.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/flot/custom/barGraph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/flot/custom/crosshairGraph.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/flot/custom/crosshairGraph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/flot/custom/donutChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/flot/custom/donutChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/flot/custom/lineGraph.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/flot/custom/lineGraph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/flot/custom/percentilesGraph.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/flot/custom/percentilesGraph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/flot/custom/pieChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/flot/custom/pieChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/flot/custom/pieTiltChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/flot/custom/pieTiltChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/flot/custom/stackedGraph.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/flot/custom/stackedGraph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/flot/custom/thresholdsGraph.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/flot/custom/thresholdsGraph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/flot/flot.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/flot/flot.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/flot/jquery.flot.crosshair.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/flot/jquery.flot.crosshair.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/flot/jquery.flot.fill-between.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/flot/jquery.flot.fill-between.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/flot/jquery.flot.pie.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/flot/jquery.flot.pie.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/flot/jquery.flot.stack.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/flot/jquery.flot.stack.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/flot/jquery.flot.threshold.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/flot/jquery.flot.threshold.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/flot/jquery.flot.tooltip.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/flot/jquery.flot.tooltip.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/flot/resize.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/flot/resize.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/gallery/baguetteBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/gallery/baguetteBox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/gallery/custom-gallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/gallery/custom-gallery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/gallery/gallery.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/gallery/gallery.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/gallery/plugins.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/gallery/plugins.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/input-masks/cleave-custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/input-masks/cleave-custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/input-masks/cleave-phone.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/input-masks/cleave-phone.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/input-masks/cleave.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/input-masks/cleave.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/input-tags/tagsinput-custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/input-tags/tagsinput-custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/input-tags/tagsinput.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/input-tags/tagsinput.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/input-tags/tagsinput.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/input-tags/tagsinput.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/input-tags/typeahead.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/input-tags/typeahead.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/jqcloud/custom-jqcloud.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/jqcloud/custom-jqcloud.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/jqcloud/jqcloud-1.0.4.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/jqcloud/jqcloud-1.0.4.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/jqcloud/jqcloud.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/jqcloud/jqcloud.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/jvectormap/custom/custom-denmark.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/jvectormap/custom/custom-denmark.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/jvectormap/custom/map-africa.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/jvectormap/custom/map-africa.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/jvectormap/custom/map-africa1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/jvectormap/custom/map-africa1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/jvectormap/custom/map-europe.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/jvectormap/custom/map-europe.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/jvectormap/custom/map-usa.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/jvectormap/custom/map-usa.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/jvectormap/custom/map-usa3.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/jvectormap/custom/map-usa3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/jvectormap/custom/regions-selection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/jvectormap/custom/regions-selection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/jvectormap/custom/resions-with-labels.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/jvectormap/custom/resions-with-labels.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/jvectormap/custom/world-map-gdp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/jvectormap/custom/world-map-gdp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/jvectormap/custom/world-map-markers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/jvectormap/custom/world-map-markers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/jvectormap/custom/world-map-markers2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/jvectormap/custom/world-map-markers2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/jvectormap/gdp-data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/jvectormap/gdp-data.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/jvectormap/jquery-jvectormap-2.0.3.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/jvectormap/jquery-jvectormap-2.0.3.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/lobipanel/css/lobipanel.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/lobipanel/css/lobipanel.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/lobipanel/js/lobipanel-custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/lobipanel/js/lobipanel-custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/lobipanel/js/lobipanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/lobipanel/js/lobipanel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/morris/custom/areaChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/morris/custom/areaChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/morris/custom/barColors.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/morris/custom/barColors.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/morris/custom/barNoAxis.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/morris/custom/barNoAxis.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/morris/custom/billStackedBarChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/morris/custom/billStackedBarChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/morris/custom/billsAreaChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/morris/custom/billsAreaChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/morris/custom/dayData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/morris/custom/dayData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/morris/custom/donutColors.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/morris/custom/donutColors.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/morris/custom/donutFormatter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/morris/custom/donutFormatter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/morris/custom/leavesAreaChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/morris/custom/leavesAreaChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/morris/custom/morrisBarChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/morris/custom/morrisBarChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/morris/custom/negativeValues.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/morris/custom/negativeValues.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/morris/custom/stackedBarChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/morris/custom/stackedBarChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/morris/custom/xLabelsDiagonally.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/morris/custom/xLabelsDiagonally.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/morris/morris.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/morris/morris.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/morris/morris.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/morris/morris.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/morris/raphael-min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/morris/raphael-min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/notify/notify-custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/notify/notify-custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/notify/notify-flat.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/notify/notify-flat.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/notify/notify.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/notify/notify.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/particles/particles-custom-error.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/particles/particles-custom-error.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/particles/particles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/particles/particles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/particles/particles.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/particles/particles.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/prism/prism.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/prism/prism.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/prism/prism.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/prism/prism.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/range-slider/ion.rangeSlider.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/range-slider/ion.rangeSlider.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/range-slider/ion.rangeSlider.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/range-slider/ion.rangeSlider.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/range-slider/rangeSlider-custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/range-slider/rangeSlider-custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/rating/raty-custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/rating/raty-custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/rating/raty.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/rating/raty.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/slimscroll/custom-scrollbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/slimscroll/custom-scrollbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/slimscroll/slimscroll.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/slimscroll/slimscroll.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/summernote/summernote-bs4.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/summernote/summernote-bs4.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/summernote/summernote-bs4.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/summernote/summernote-bs4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/wizard/jquery.steps.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/wizard/jquery.steps.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/wizard/jquery.steps.custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/wizard/jquery.steps.custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/wizard/jquery.steps.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/wizard/jquery.steps.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/Bill.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/Bill.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/BillsList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/BillsList.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/Dependants.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/Dependants.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/EditProfile.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/EditProfile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/LeaveCategorySettings.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/LeaveCategorySettings.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/Leaves.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/Leaves.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/RolesSetting.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/RolesSetting.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/Tasks.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/Tasks.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/addNewEmployee.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/addNewEmployee.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/adminBRequestHistory.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/adminBRequestHistory.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/adminLRequestHistory.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/adminLRequestHistory.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/authorizeBillForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/authorizeBillForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/authorizeForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/authorizeForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/authorizeRegistrationForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/authorizeRegistrationForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/billDetailAuthorizeForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/billDetailAuthorizeForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/billPics.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/billPics.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/billUpdate.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/billUpdate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/billsReport.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/billsReport.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/changePassword.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/changePassword.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cofirmationModal.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cofirmationModal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/depUpdate.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/depUpdate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/departmentSetting.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/departmentSetting.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/dependantsList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/dependantsList.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editEmployee.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/editEmployee.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/email.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/email.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/employeeList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/employeeList.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/modal.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/modal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home1.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/home1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/leaveDetailAuthorizeForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/leaveDetailAuthorizeForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/leavesRequestList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/leavesRequestList.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/moduleSetting.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/moduleSetting.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reports.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reports.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/requestListDetailForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/requestListDetailForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/showBillDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/showBillDetail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/showEmployeeDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/showEmployeeDetail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/singleEmployee.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/singleEmployee.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/taskForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/taskForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/tasksDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/tasksDetails.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/userSettings.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/userSettings.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/econception/employemanagement/EmployemanagementApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/econception/employemanagement/EmployemanagementApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/econception/employemanagement/service/DepartmentServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/econception/employemanagement/service/DepartmentServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/econception/employemanagement/service/EmployeeBillsClaimServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/econception/employemanagement/service/EmployeeBillsClaimServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/econception/employemanagement/service/EmployeeDependantsServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/econception/employemanagement/service/EmployeeDependantsServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/econception/employemanagement/service/EmployeeServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/econception/employemanagement/service/EmployeeServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/econception/employemanagement/service/EmployeeTasksServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/econception/employemanagement/service/EmployeeTasksServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/econception/employemanagement/service/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/econception/employemanagement/service/UserServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/additional-spring-configuration-metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/additional-spring-configuration-metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/EmployemanagementApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/WebSecurityConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/config/MvcConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/config/MvcConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/controller/BillResources.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/controller/DependantsResources.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/controller/EmployeeResource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/controller/FileResources.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/controller/HomeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/controller/LeaveController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/controller/ReportsResource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/controller/SettingsResource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/controller/TaskResources.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/controller/UserResource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/domain/Comments.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/domain/Comments.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/domain/Department.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/domain/Department.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/domain/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/domain/Employee.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/domain/EmployeeBillsClaim.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/domain/EmployeeBillsClaim.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/domain/EmployeeDependants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/domain/EmployeeDependants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/domain/EmployeeLeaves.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/domain/EmployeeLeaves.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/domain/EmployeeTasks.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/domain/EmployeeTasks.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/domain/EmployeeWebHistroy.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/domain/EmployeeWebHistroy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/domain/Files.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/domain/Files.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/domain/LeavesCategories.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/domain/LeavesCategories.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/domain/Module.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/domain/Module.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/domain/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/domain/Role.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/domain/Session.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/domain/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/domain/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/dto/AllLeaveTypesData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/dto/AllLeaveTypesData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/dto/BIllReportDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/dto/BIllReportDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/dto/BillsDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/dto/BillsDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/dto/LeaveReportDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/dto/LeaveReportDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/dto/LeavesDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/dto/LeavesDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/dto/NewEmployeeDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/dto/NewEmployeeDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/dto/PasswordDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/dto/PasswordDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/dto/TasksDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/dto/TasksDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/dto/filesDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/dto/filesDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/service/BillsStatsService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/service/DepartmentService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/service/EmployeeBillsClaimService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/service/EmployeeDependantsService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/service/EmployeeLeaveService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/service/EmployeeService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/service/EmployeeTasksService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/service/EmployeeWebHistroyService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/service/FilesServics.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/service/MailService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/service/MyUserDetailsService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/service/ReportService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/service/SecurityService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/service/StatsService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/econception/employemanagement/service/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/.idea/static.iml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/.idea/static.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/MainPage_SH.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/MainPage_SH.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/Style_SH.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/Style_SH.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/blink.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/blink.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/bootstrap-datetimepicker.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/bootstrap-datetimepicker.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/foopicker.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/foopicker.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/icons.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/icons.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/inboundMain.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/inboundMain.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/inner.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/inner.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/main-light-color.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/main-light-color.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/public.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/public.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/toasty.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/toasty.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/fonts/CreditCard.svg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/fonts/CreditCard.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/fonts/icomoonf33b.svg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/fonts/icomoonf33b.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/fonts/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/fonts/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/docs/doc.svg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/docs/doc.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/docs/pdf.svg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/docs/pdf.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/docs/ppt.svg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/docs/ppt.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/docs/xls.svg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/docs/xls.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/docs/zip.svg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/docs/zip.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/notification-danger.svg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/notification-danger.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/notification-info.svg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/notification-info.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/notification-success.svg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/notification-success.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/bootstrap.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/jquery-ui.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/jquery-ui.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/jquery.easing.1.3.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/jquery.easing.1.3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/moment.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/moment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/apex/apexcharts.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/apex/apexcharts.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/apex/ecommerce-dashboard/by-channel.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/apex/ecommerce-dashboard/by-channel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/apex/ecommerce-dashboard/by-customer-type.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/apex/ecommerce-dashboard/by-customer-type.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/apex/ecommerce-dashboard/by-device.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/apex/ecommerce-dashboard/by-device.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/apex/ecommerce-dashboard/orders-visits-bouncerate.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/apex/ecommerce-dashboard/orders-visits-bouncerate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/area/basic-area-graph-spline.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/area/basic-area-graph-spline.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/area/basic-area-graph-stacked.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/area/basic-area-graph-stacked.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/area/basic-area-graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/area/basic-area-graph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/area/bills-area-graph-stacked.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/area/bills-area-graph-stacked.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/bar/basic-bar-graph-grouped.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/bar/basic-bar-graph-grouped.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/bar/basic-bar-graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/bar/basic-bar-graph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/bar/basic-bar-negative-values.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/bar/basic-bar-negative-values.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/bar/basic-bar-stack-graph-full-width.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/bar/basic-bar-stack-graph-full-width.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/bar/basic-bar-stack-graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/bar/basic-bar-stack-graph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/bubble/basic-bubble-graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/bubble/basic-bubble-graph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/candlestick/basic-candlestick-graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/candlestick/basic-candlestick-graph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/column/basic-column-graph-datalables.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/column/basic-column-graph-datalables.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/column/basic-column-graph-rotated-labels.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/column/basic-column-graph-rotated-labels.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/column/basic-column-graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/column/basic-column-graph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/column/basic-column-stack-graph-fullheight.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/column/basic-column-stack-graph-fullheight.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/column/basic-column-stack-graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/column/basic-column-stack-graph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/line/basic-line-graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/line/basic-line-graph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/line/line-with-data-labels.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/line/line-with-data-labels.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/line/stepline.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/line/stepline.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/mixed/line-area-graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/mixed/line-area-graph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/mixed/line-column-graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/mixed/line-column-graph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/mixed/line-scatter-graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/mixed/line-scatter-graph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/mixed/multiple-yaxis.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/mixed/multiple-yaxis.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/pie/basic-donut-graph-gradient.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/pie/basic-donut-graph-gradient.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/pie/basic-donut-graph-monochrome-gradient.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/pie/basic-donut-graph-monochrome-gradient.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/pie/basic-donut-graph-monochrome.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/pie/basic-donut-graph-monochrome.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/pie/basic-donut-graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/pie/basic-donut-graph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/pie/basic-pie-graph-gradient.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/pie/basic-pie-graph-gradient.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/pie/basic-pie-graph-monochrome-gradient.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/pie/basic-pie-graph-monochrome-gradient.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/pie/basic-pie-graph-monochrome.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/pie/basic-pie-graph-monochrome.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/pie/basic-pie-graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/pie/basic-pie-graph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/radial/basic-radial-graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/radial/basic-radial-graph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/radial/basic-radial-graph2.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/apex/examples/radial/basic-radial-graph2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/apex/helpdesk-dashboard/complaints.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/apex/helpdesk-dashboard/complaints.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/apex/helpdesk-dashboard/cost-per-support.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/apex/helpdesk-dashboard/cost-per-support.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/apex/helpdesk-dashboard/support-requests.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/apex/helpdesk-dashboard/support-requests.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/apex/helpdesk-dashboard/tasksAss.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/apex/helpdesk-dashboard/tasksAss.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/apex/helpdesk-dashboard/tickets.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/apex/helpdesk-dashboard/tickets.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/apex/helpdesk-dashboard/traffic-analysis.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/apex/helpdesk-dashboard/traffic-analysis.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/apex/project-dashboard/avg-handle-time.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/apex/project-dashboard/avg-handle-time.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/apex/project-dashboard/budget.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/apex/project-dashboard/budget.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/apex/project-dashboard/tasks-assigned.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/apex/project-dashboard/tasks-assigned.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/apex/project-dashboard/timeline.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/apex/project-dashboard/timeline.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/apex/quick-dashboard/compare-sales.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/apex/quick-dashboard/compare-sales.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/apex/quick-dashboard/compare-sales1.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/apex/quick-dashboard/compare-sales1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/apex/quick-dashboard/tasks.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/apex/quick-dashboard/tasks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/bs-select/bs-select.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/bs-select/bs-select.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/bs-select/bs-select.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/bs-select/bs-select.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/c3/c3.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/c3/c3.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/c3/c3.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/c3/c3.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/c3/custom/area-spline-graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/c3/custom/area-spline-graph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/c3/custom/bar-area-graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/c3/custom/bar-area-graph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/c3/custom/bar-graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/c3/custom/bar-graph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/c3/custom/donut-chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/c3/custom/donut-chart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/c3/custom/line-graph-one.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/c3/custom/line-graph-one.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/c3/custom/line-graph-overview.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/c3/custom/line-graph-overview.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/c3/custom/line-graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/c3/custom/line-graph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/c3/custom/pie-chart-one.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/c3/custom/pie-chart-one.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/c3/custom/pie-chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/c3/custom/pie-chart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/c3/custom/scatter-plot.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/c3/custom/scatter-plot.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/c3/custom/server-requests.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/c3/custom/server-requests.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/c3/custom/spline-graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/c3/custom/spline-graph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/c3/custom/spline-sales.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/c3/custom/spline-sales.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/c3/custom/stacked-bar-braph.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/c3/custom/stacked-bar-braph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/c3/custom/step-graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/c3/custom/step-graph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/calendar/css/core/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/calendar/css/core/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/calendar/css/daygrid/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/calendar/css/daygrid/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/calendar/css/list/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/calendar/css/list/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/calendar/css/timegrid/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/calendar/css/timegrid/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/calendar/js/core/main.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/calendar/js/core/main.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/calendar/js/custom-external-draggable-calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/calendar/js/custom-external-draggable-calendar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/calendar/js/custom-google-calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/calendar/js/custom-google-calendar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/calendar/js/custom-list-view.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/calendar/js/custom-list-view.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/calendar/js/custom-selectable-calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/calendar/js/custom-selectable-calendar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/calendar/js/custom-week-numbers.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/calendar/js/custom-week-numbers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/calendar/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/calendar/js/custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/calendar/js/daygrid/main.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/calendar/js/daygrid/main.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/calendar/js/google-calendar/main.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/calendar/js/google-calendar/main.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/calendar/js/interaction/main.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/calendar/js/interaction/main.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/calendar/js/list/main.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/calendar/js/list/main.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/calendar/js/timegrid/main.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/calendar/js/timegrid/main.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/chartist/css/chartist-custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/chartist/css/chartist-custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/chartist/js/chartist-tooltip.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/chartist/js/chartist-tooltip.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/chartist/js/chartist.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/chartist/js/chartist.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/chartist/js/custom/area/custom-area-chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/chartist/js/custom/area/custom-area-chart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/chartist/js/custom/area/custom-area-chart2.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/chartist/js/custom/area/custom-area-chart2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/chartist/js/custom/bar/bar-chart-orders.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/chartist/js/custom/bar/bar-chart-orders.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/chartist/js/custom/bar/bar-chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/chartist/js/custom/bar/bar-chart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/chartist/js/custom/bar/stack-bar-chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/chartist/js/custom/bar/stack-bar-chart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/chartist/js/custom/line/multiple-line-charts.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/chartist/js/custom/line/multiple-line-charts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/chartist/js/custom/pie/pie-charts3.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/chartist/js/custom/pie/pie-charts3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/chartist/js/custom/threshold/threshold.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/chartist/js/custom/threshold/threshold.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/circliful/circliful.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/circliful/circliful.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/circliful/circliful.custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/circliful/circliful.custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/circliful/circliful.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/circliful/circliful.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/d3/d3.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/d3/d3.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/datatables/buttons.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/datatables/buttons.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/datatables/buttons.print.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/datatables/buttons.print.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/datatables/custom/custom-datatables.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/datatables/custom/custom-datatables.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/datatables/custom/fixedHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/datatables/custom/fixedHeader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/datatables/dataTables.bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/datatables/dataTables.bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/datatables/dataTables.bs4-custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/datatables/dataTables.bs4-custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/datatables/dataTables.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/datatables/dataTables.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/datatables/html5.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/datatables/html5.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/datatables/jszip.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/datatables/jszip.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/datatables/pdfmake.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/datatables/pdfmake.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/datepicker/css/classic.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/datepicker/css/classic.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/datepicker/css/classic.date.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/datepicker/css/classic.date.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/datepicker/js/custom-picker.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/datepicker/js/custom-picker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/datepicker/js/picker.date.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/datepicker/js/picker.date.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/datepicker/js/picker.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/datepicker/js/picker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/daterange/custom-daterange.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/daterange/custom-daterange.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/daterange/daterange.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/daterange/daterange.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/daterange/daterange.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/daterange/daterange.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/flot/custom/areaGraph.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/flot/custom/areaGraph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/flot/custom/barGraph.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/flot/custom/barGraph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/flot/custom/crosshairGraph.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/flot/custom/crosshairGraph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/flot/custom/donutChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/flot/custom/donutChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/flot/custom/lineGraph.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/flot/custom/lineGraph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/flot/custom/percentilesGraph.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/flot/custom/percentilesGraph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/flot/custom/pieChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/flot/custom/pieChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/flot/custom/pieTiltChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/flot/custom/pieTiltChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/flot/custom/stackedGraph.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/flot/custom/stackedGraph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/flot/custom/thresholdsGraph.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/flot/custom/thresholdsGraph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/flot/flot.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/flot/flot.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/flot/jquery.flot.crosshair.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/flot/jquery.flot.crosshair.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/flot/jquery.flot.fill-between.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/flot/jquery.flot.fill-between.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/flot/jquery.flot.pie.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/flot/jquery.flot.pie.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/flot/jquery.flot.stack.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/flot/jquery.flot.stack.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/flot/jquery.flot.threshold.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/flot/jquery.flot.threshold.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/flot/jquery.flot.tooltip.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/flot/jquery.flot.tooltip.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/flot/resize.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/flot/resize.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/gallery/baguetteBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/gallery/baguetteBox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/gallery/custom-gallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/gallery/custom-gallery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/gallery/gallery.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/gallery/gallery.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/gallery/plugins.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/gallery/plugins.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/input-masks/cleave-custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/input-masks/cleave-custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/input-masks/cleave-phone.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/input-masks/cleave-phone.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/input-masks/cleave.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/input-masks/cleave.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/input-tags/tagsinput-custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/input-tags/tagsinput-custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/input-tags/tagsinput.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/input-tags/tagsinput.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/input-tags/tagsinput.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/input-tags/tagsinput.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/input-tags/typeahead.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/input-tags/typeahead.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/jqcloud/custom-jqcloud.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/jqcloud/custom-jqcloud.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/jqcloud/jqcloud-1.0.4.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/jqcloud/jqcloud-1.0.4.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/jqcloud/jqcloud.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/jqcloud/jqcloud.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/jvectormap/custom/custom-denmark.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/jvectormap/custom/custom-denmark.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/jvectormap/custom/map-africa.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/jvectormap/custom/map-africa.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/jvectormap/custom/map-africa1.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/jvectormap/custom/map-africa1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/jvectormap/custom/map-europe.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/jvectormap/custom/map-europe.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/jvectormap/custom/map-usa.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/jvectormap/custom/map-usa.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/jvectormap/custom/map-usa3.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/jvectormap/custom/map-usa3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/jvectormap/custom/regions-selection.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/jvectormap/custom/regions-selection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/jvectormap/custom/resions-with-labels.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/jvectormap/custom/resions-with-labels.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/jvectormap/custom/world-map-gdp.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/jvectormap/custom/world-map-gdp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/jvectormap/custom/world-map-markers.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/jvectormap/custom/world-map-markers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/jvectormap/custom/world-map-markers2.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/jvectormap/custom/world-map-markers2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/jvectormap/gdp-data.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/jvectormap/gdp-data.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/jvectormap/jquery-jvectormap-2.0.3.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/jvectormap/jquery-jvectormap-2.0.3.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/lobipanel/css/lobipanel.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/lobipanel/css/lobipanel.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/lobipanel/js/lobipanel-custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/lobipanel/js/lobipanel-custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/lobipanel/js/lobipanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/lobipanel/js/lobipanel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/morris/custom/areaChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/morris/custom/areaChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/morris/custom/barColors.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/morris/custom/barColors.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/morris/custom/barNoAxis.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/morris/custom/barNoAxis.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/morris/custom/billStackedBarChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/morris/custom/billStackedBarChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/morris/custom/billsAreaChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/morris/custom/billsAreaChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/morris/custom/dayData.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/morris/custom/dayData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/morris/custom/donutColors.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/morris/custom/donutColors.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/morris/custom/donutFormatter.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/morris/custom/donutFormatter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/morris/custom/leavesAreaChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/morris/custom/leavesAreaChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/morris/custom/morrisBarChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/morris/custom/morrisBarChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/morris/custom/negativeValues.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/morris/custom/negativeValues.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/morris/custom/stackedBarChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/morris/custom/stackedBarChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/morris/custom/xLabelsDiagonally.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/morris/custom/xLabelsDiagonally.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/morris/morris.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/morris/morris.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/morris/morris.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/morris/morris.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/morris/raphael-min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/morris/raphael-min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/notify/notify-custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/notify/notify-custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/notify/notify-flat.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/notify/notify-flat.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/notify/notify.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/notify/notify.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/particles/particles-custom-error.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/particles/particles-custom-error.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/particles/particles.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/particles/particles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/particles/particles.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/particles/particles.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/prism/prism.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/prism/prism.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/prism/prism.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/prism/prism.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/range-slider/ion.rangeSlider.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/range-slider/ion.rangeSlider.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/range-slider/ion.rangeSlider.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/range-slider/ion.rangeSlider.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/range-slider/rangeSlider-custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/range-slider/rangeSlider-custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/rating/raty-custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/rating/raty-custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/rating/raty.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/rating/raty.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/slimscroll/custom-scrollbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/slimscroll/custom-scrollbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/slimscroll/slimscroll.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/slimscroll/slimscroll.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/summernote/summernote-bs4.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/summernote/summernote-bs4.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/summernote/summernote-bs4.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/summernote/summernote-bs4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/wizard/jquery.steps.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/wizard/jquery.steps.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/wizard/jquery.steps.custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/wizard/jquery.steps.custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/wizard/jquery.steps.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/wizard/jquery.steps.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/Bill.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/Bill.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/BillsList.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/BillsList.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/Dependants.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/Dependants.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/EditProfile.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/EditProfile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/LeaveCategorySettings.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/LeaveCategorySettings.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/Leaves.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/Leaves.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/RolesSetting.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/RolesSetting.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/Tasks.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/Tasks.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/addNewEmployee.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/addNewEmployee.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/adminBRequestHistory.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/adminBRequestHistory.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/adminLRequestHistory.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/adminLRequestHistory.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/authorizeBillForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/authorizeBillForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/authorizeForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/authorizeForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/authorizeRegistrationForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/authorizeRegistrationForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/billDetailAuthorizeForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/billDetailAuthorizeForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/billPics.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/billPics.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/billUpdate.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/billUpdate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/billsReport.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/billsReport.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/changePassword.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/changePassword.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/cofirmationModal.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/cofirmationModal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/depUpdate.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/depUpdate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/departmentSetting.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/departmentSetting.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/dependantsList.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/dependantsList.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/editEmployee.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/editEmployee.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/email.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/email.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/employeeList.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/employeeList.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/modal.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/modal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/home1.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/home1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/leaveDetailAuthorizeForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/leaveDetailAuthorizeForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/leavesRequestList.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/leavesRequestList.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/moduleSetting.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/moduleSetting.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/reports.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/reports.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/requestListDetailForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/requestListDetailForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/showBillDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/showBillDetail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/showEmployeeDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/showEmployeeDetail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/singleEmployee.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/singleEmployee.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/taskForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/taskForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/tasksDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/tasksDetails.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/userSettings.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/userSettings.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/econception/employemanagement/EmployemanagementApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/econception/employemanagement/service/DepartmentServiceTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/econception/employemanagement/service/EmployeeBillsClaimServiceTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/econception/employemanagement/service/EmployeeDependantsServiceTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/econception/employemanagement/service/EmployeeServiceTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/econception/employemanagement/service/EmployeeTasksServiceTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/econception/employemanagement/service/UserServiceTest.class" beforeDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/target/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,78 +748,12 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/econception/employemanagement/controller/HomeController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="33" column="29" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/econception/employemanagement/domain/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/desktop.ini">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mvnw">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mvnw.cmd">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="79">
-              <caret line="129" column="50" lean-forward="true" selection-start-line="129" selection-start-column="50" selection-end-line="129" selection-end-column="50" />
-            </state>
-          </provider>
-          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/econception/employemanagement/service/DepartmentServiceTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-350">
-              <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -103,30 +768,58 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/service/MyUserDetailsService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/econception/employemanagement/dto/Animal.java" />
       </list>
     </option>
+  </component>
+  <component name="InvalidFacetManager">
+    <ignored-facets>
+      <facet id="employemanagement/invalid/JPA" />
+      <facet id="employemanagement/invalid/Spring" />
+      <facet id="employemanagement/invalid/Web" />
+    </ignored-facets>
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
         <option name="jdkForImporter" value="11" />
       </MavenImportingSettings>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-15" />
-    <option name="y" value="65" />
-    <option name="width" value="1955" />
-    <option name="height" value="2110" />
+    <option name="x" value="1907" />
+    <option name="width" value="1945" />
+    <option name="height" value="2173" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="2GOnUhT2wgrUBHuMzJpKqUlq4hc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -172,6 +865,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="employemanagement" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="employemanagement" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EMS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="employemanagement" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -185,36 +887,48 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="Course" />
     </panes>
   </component>
-  <component name="PropertiesComponent">
-    <property name="RequestMappingsPanelOrder0" value="0" />
-    <property name="RequestMappingsPanelOrder1" value="1" />
-    <property name="RequestMappingsPanelWidth0" value="75" />
-    <property name="RequestMappingsPanelWidth1" value="75" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../eConceptionSMS_SERVICES" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "last_opened_file_path": "/Users/sulmanmehboob/My Projects/spring boot/EMS",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.propCompiler"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean:clean" />
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.EmployemanagementApplication">
+    <configuration name="EmployemanagementApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.econception.employemanagement.EmployemanagementApplication" />
+      <module name="employemanagement" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.econception.employemanagement.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="EmployemanagementApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="employemanagement" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.econception.employemanagement.EmployemanagementApplication" />
@@ -222,7 +936,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.EmployemanagementApplication" />
+      </list>
+    </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -233,50 +953,54 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1634062019787</updated>
-      <workItem from="1634062021348" duration="6313000" />
+      <workItem from="1634062021348" duration="7816000" />
+      <workItem from="1634230520399" duration="1704000" />
+      <workItem from="1634233443787" duration="5107000" />
+      <workItem from="1640370741108" duration="3892000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6313000" />
+    <option name="totallyTimeSpent" value="18519000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1549" height="829" extended-state="6" />
+    <frame x="-6" y="-6" width="1549" height="877" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Designer" />
-      <window_info id="Image Layers" />
-      <window_info id="Capture Tool" />
-      <window_info id="UI Designer" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info id="Web" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24949698" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.240778" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Spring" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.249226" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Educational.CheckDetails" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" weight="0.32972136" />
-      <window_info anchor="bottom" id="Java Enterprise" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" weight="0.30804953" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.5371517" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.5361111" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Bean Validation" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.5924765" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Educational.CheckDetails" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32916668" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" />
+      <window_info anchor="bottom" id="Database Changes" order="14" />
+      <window_info anchor="bottom" id="Version Control" order="15" weight="0.30804953" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,22 +1011,21 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-              <option name="COLUMN_ORDER">
-                <list>
-                  <option value="0" />
-                  <option value="1" />
-                  <option value="2" />
-                  <option value="3" />
-                </list>
-              </option>
-            </State>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
           </value>
         </entry>
       </map>
@@ -314,50 +1037,13 @@
     </ignored-roots>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/upload-photos/1.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/upload-photos/1.jpg" />
+    <entry file="file://$PROJECT_DIR$/.gitignore" />
+    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/econception/employemanagement/controller/HomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="33" column="29" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/econception/employemanagement/domain/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/econception/employemanagement/service/DepartmentServiceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-350">
-          <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
+        <state relative-caret-position="153">
+          <caret line="9" column="45" selection-end-line="26" />
         </state>
       </provider>
     </entry>
@@ -370,13 +1056,139 @@
     <entry file="file://$PROJECT_DIR$/mvnw.cmd">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/econception/employemanagement/service/DepartmentServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="129" column="50" lean-forward="true" selection-start-line="129" selection-start-column="50" selection-end-line="129" selection-end-column="50" />
+        <state relative-caret-position="365">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="249" />
         </state>
       </provider>
       <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/econception/employemanagement/service/MyUserDetailsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1459#1477#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/econception/employemanagement/domain/Role.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/econception/employemanagement/WebSecurityConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/econception/employemanagement/domain/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="47" column="30" selection-start-line="45" selection-start-column="4" selection-end-line="47" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/main.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/econception/employemanagement/config/MvcConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/econception/employemanagement/repository/UserRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="12" column="41" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/econception/employemanagement/controller/HomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="65" column="14" selection-start-line="65" selection-start-column="14" selection-end-line="65" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/econception/employemanagement/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-51">
+          <caret line="16" column="2" selection-start-line="16" selection-end-line="16" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/econception/employemanagement/service/SecurityService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/econception/employemanagement/EmployemanagementApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="14" column="5" lean-forward="true" selection-start-line="12" selection-start-column="3" selection-end-line="14" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/econception/employemanagement/controller/LeaveController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1500">
+          <caret line="39" column="13" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/econception/employemanagement/controller/ReportsResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="101" lean-forward="true" selection-start-line="101" selection-end-line="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/econception/employemanagement/dto/AnimalDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="32" lean-forward="true" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
